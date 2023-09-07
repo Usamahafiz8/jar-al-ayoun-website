@@ -1,8 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import ThinBag from "../../../Helpers/icons/ThinBag";
 import Middlebar from "./Middlebar";
 import Navbar from "./Navbar";
 import TopBar from "./TopBar";
@@ -21,7 +18,7 @@ export default function Header({ drawerAction, settings, contact }) {
         settings={settings && settings}
         className="quomodo-shop-middle-bar lg:block hidden"
       />
-      <div className="quomodo-shop-drawer lg:hidden block w-full h-[60px] bg-white">
+      {/* <div className="quomodo-shop-drawer lg:hidden block w-full h-[60px] bg-white">
         <div className="w-full h-full flex justify-between items-center px-5">
           <div onClick={drawerAction}>
             <svg
@@ -64,7 +61,7 @@ export default function Header({ drawerAction, settings, contact }) {
             </span>
           </div>
         </div>
-      </div>
+      </div> */}
       <Navbar className="quomodo-shop-nav-bar lg:block hidden" />
     </header>
   );

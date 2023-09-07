@@ -508,8 +508,9 @@ body {
 
 /*TODO:=========home one=========*/
 .search-btn {
-  @apply text-qblack;
-  background: var(--primary-color);
+  /* @apply text-qwhite; */
+  color: #ffffff;
+  background: #ED1B24;
 }
 
 .cart-wrappwer {
@@ -532,11 +533,11 @@ body {
 }
 
 .quomodo-shop-nav-bar.nav-widget-wrapper {
-  background: var(--primary-color);
+  background: white;
 }
 
 .nav-widget-wrapper .become-seller-btn {
-  @apply text-white bg-qblack;
+  @apply text-qblack bg-white;
 }
 
 .nav-widget-wrapper .category-dropdown .categories-list .category-item {

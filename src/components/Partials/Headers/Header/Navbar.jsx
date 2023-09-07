@@ -1,11 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import ServeLangItem from "../../../Helpers/ServeLangItem";
 import Arrow from "../../../Helpers/icons/Arrow";
 import FontAwesomeCom from "../../../Helpers/icons/FontAwesomeCom";
 import Multivendor from "../../../Shared/Multivendor";
-import ServeLangItem from "../../../Helpers/ServeLangItem";
 export default function Navbar({ className }) {
   const { websiteSetup } = useSelector((state) => state.websiteSetup);
   const categoryList = websiteSetup && websiteSetup.payload.productCategories;
@@ -32,27 +31,14 @@ export default function Navbar({ className }) {
         <div className="w-full h-full relative">
           <div className="w-full h-full flex justify-between items-center">
             <div className="category-and-nav flex xl:rtl:space-x-reverse space-x-7 rtl:space-x-reverse space-x-3 items-center">
-              <div className="category w-[270px] h-[53px] bg-white px-5 rounded-t-md mt-[6px] relative">
+              <div className="category w-[270px] h-[35px] px-5 rounded-md mt-[6px] relative bg-primary text-white">
                 <button
                   onClick={handler}
                   type="button"
-                  className="w-full h-full flex justify-between items-center"
+                  className="w-full h-full flex justify-between items-center text-qwhite "
                 >
-                  <div className="flex rtl:space-x-reverse space-x-3 items-center">
-                    <span>
-                      <svg
-                        width="14"
-                        height="9"
-                        viewBox="0 0 14 9"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <rect width="14" height="1"  />
-                        <rect y="8" width="14" height="1"  />
-                        <rect y="4" width="10" height="1"  />
-                      </svg>
-                    </span>
-                    <span className="text-sm font-600 text-qblacktext">
+                  <div className="flex rtl:space-x-reverse space-x-3 items-center ">
+                    <span className="text-sm font-600 text-qwhite ">
                       {ServeLangItem()?.All_Categories}
                     </span>
                   </div>
@@ -60,7 +46,7 @@ export default function Navbar({ className }) {
                     <Arrow
                       width="5.78538"
                       height="1.28564"
-                      className="fill-current text-qblacktext"
+                      className="fill-current text-qwhite"
                     />
                   </div>
                 </button>
@@ -120,7 +106,6 @@ export default function Navbar({ className }) {
                                         width="5.78538"
                                         height="1.28564"
                                         transform="rotate(45 1.49805 0.818359)"
-
                                       />
                                       <rect
                                         x="5.58984"
@@ -128,7 +113,6 @@ export default function Navbar({ className }) {
                                         width="5.78538"
                                         height="1.28564"
                                         transform="rotate(135 5.58984 4.90918)"
-
                                       />
                                     </svg>
                                   </span>
@@ -181,7 +165,6 @@ export default function Navbar({ className }) {
                                                   width="5.78538"
                                                   height="1.28564"
                                                   transform="rotate(45 1.49805 0.818359)"
-
                                                 />
                                                 <rect
                                                   x="5.58984"
@@ -189,7 +172,6 @@ export default function Navbar({ className }) {
                                                   width="5.78538"
                                                   height="1.28564"
                                                   transform="rotate(135 5.58984 4.90918)"
-
                                                 />
                                               </svg>
                                             </span>
@@ -251,41 +233,7 @@ export default function Navbar({ className }) {
               </div>
               <div className="nav">
                 <ul className="nav-wrapper flex xl:space-x-10 rtl:space-x-reverse space-x-5">
-                  {/*<li className="relative">*/}
-                  {/*  <Link href="/">*/}
-                  {/*    <span className="flex items-center text-sm font-600 cursor-pointer text-qblack ">*/}
-                  {/*      <span>Homepage</span>*/}
-                  {/*      <span className="ml-1.5 ">*/}
-                  {/*        <Arrow className="fill-current" />*/}
-                  {/*      </span>*/}
-                  {/*    </span>*/}
-                  {/*  </Link>*/}
-                  {/*  <div className="sub-menu w-[220px] absolute left-0 top-[60px]">*/}
-                  {/*    <div*/}
-                  {/*      className="w-full bg-white flex justify-between items-center "*/}
-                  {/*      style={{*/}
-                  {/*        boxShadow: "0px 15px 50px 0px rgba(0, 0, 0, 0.14)",*/}
-                  {/*      }}*/}
-                  {/*    >*/}
-                  {/*      <div className="categories-wrapper w-full h-full p-5">*/}
-                  {/*        <div>*/}
-                  {/*          <div className="category-items">*/}
-                  {/*            <ul className="flex flex-col space-y-2">*/}
-                  {/*              <li>*/}
-                  {/*                <Link href="/home-two">*/}
-                  {/*                  <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:primary-text cursor-pointer">*/}
-                  {/*                    Home two*/}
-                  {/*                  </span>*/}
-                  {/*                </Link>*/}
-                  {/*              </li>*/}
-                  {/*            </ul>*/}
-                  {/*          </div>*/}
-                  {/*        </div>*/}
-                  {/*      </div>*/}
-                  {/*    </div>*/}
-                  {/*  </div>*/}
-                  {/*</li>*/}
-                  <li>
+                  {/* <li>
                     <span className="flex items-center text-sm font-600 cursor-pointer text-qblack ">
                       <span>{ServeLangItem()?.Shop}</span>
                       <span className="ml-1.5 ">
@@ -395,7 +343,6 @@ export default function Navbar({ className }) {
                                               width="6.94219"
                                               height="1.54271"
                                               transform="rotate(45 2.08984 0.636719)"
-
                                             />
                                             <rect
                                               x="7"
@@ -403,7 +350,6 @@ export default function Navbar({ className }) {
                                               width="6.94219"
                                               height="1.54271"
                                               transform="rotate(135 7 5.54492)"
-
                                             />
                                           </svg>
                                         </span>
@@ -418,189 +364,128 @@ export default function Navbar({ className }) {
                         )}
                       </div>
                     </div>
-                  </li>
+                  </li> */}
 
                   <li>
-                    <Link href="/sellers" passHref>
+                    <Link href="/" passHref>
                       <a rel="noopener noreferrer">
                         <span className="flex items-center text-sm font-600 cursor-pointer text-qblack ">
-                          <span>{ServeLangItem()?.Sellers}</span>
+                          {/* <span>{ServeLangItem()?.Sellers}</span> */}
+                          Deals
                         </span>
                       </a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/blogs" passHref>
+                    <Link href="/" passHref>
                       <a rel="noopener noreferrer">
                         <span className="flex items-center text-sm font-600 cursor-pointer text-qblack ">
-                          <span className="capitalize">
-                            {ServeLangItem()?.blogs}
-                          </span>
+                          {/* <span>{ServeLangItem()?.Sellers}</span> */}
+                          EYEGLASSES
                         </span>
                       </a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/about" passHref>
+                    <Link href="/" passHref>
                       <a rel="noopener noreferrer">
                         <span className="flex items-center text-sm font-600 cursor-pointer text-qblack ">
-                          <span>{ServeLangItem()?.About}</span>
+                          {/* <span>{ServeLangItem()?.Sellers}</span> */}
+                          COMPUTER GLASSES
                         </span>
                       </a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/contact" passHref>
+                    <Link href="/" passHref>
                       <a rel="noopener noreferrer">
                         <span className="flex items-center text-sm font-600 cursor-pointer text-qblack ">
-                          <span>{ServeLangItem()?.Contact}</span>
+                          {/* <span>{ServeLangItem()?.Sellers}</span> */}
+                          KIDS GLASSES
                         </span>
                       </a>
                     </Link>
                   </li>
-                  <li className="relative">
-                    <span className="flex items-center text-sm font-600 cursor-pointer text-qblack ">
-                      <span>{ServeLangItem()?.Pages}</span>
-                      <span className="ml-1.5 ">
-                        <Arrow className="fill-current" />
-                      </span>
-                    </span>
-                    <div className="sub-menu w-[220px] absolute left-0 top-[60px]">
-                      <div
-                        className="w-full bg-white flex justify-between items-center "
-                        style={{
-                          boxShadow: "0px 15px 50px 0px rgba(0, 0, 0, 0.14)",
-                        }}
-                      >
-                        <div className="categories-wrapper w-full h-full p-5">
-                          <div>
-                            <div className="category-items">
-                              <ul className="flex flex-col space-y-2">
-                                <li>
-                                  <Link href="/privacy-policy" passHref>
-                                    <a rel="noopener noreferrer">
-                                      <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:primary-text cursor-pointer">
-                                        {ServeLangItem()?.Privacy_Policy}
-                                      </span>
-                                    </a>
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link href="/terms-condition" passHref>
-                                    <a rel="noopener noreferrer">
-                                      <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:primary-text cursor-pointer">
-                                        {ServeLangItem()?.Term_and_Conditions}
-                                      </span>
-                                    </a>
-                                  </Link>
-                                </li>
-                                {Multivendor() === 1 && (
-                                  <li>
-                                    <Link
-                                      href="seller-terms-condition"
-                                      passHref
-                                    >
-                                      <a rel="noopener noreferrer">
-                                        <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:primary-text cursor-pointer">
-                                          {
-                                            ServeLangItem()
-                                              ?.Seller_terms_and_conditions
-                                          }
-                                        </span>
-                                      </a>
-                                    </Link>
-                                  </li>
-                                )}
-                                <li>
-                                  <Link href="/faq" passHref>
-                                    <a rel="noopener noreferrer">
-                                      <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:primary-text cursor-pointer">
-                                        {ServeLangItem()?.FAQ}
-                                      </span>
-                                    </a>
-                                  </Link>
-                                </li>
-                                {customPages &&
-                                  customPages.length > 0 &&
-                                  customPages.map((item, i) => (
-                                    // eslint-disable-next-line react/jsx-key
-                                    <React.Fragment key={i}>
-                                      <li>
-                                        <Link
-                                          href={`/pages?custom=${item.slug}`}
-                                          passHref
-                                        >
-                                          <a rel="noopener noreferrer">
-                                            <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:primary-text cursor-pointer">
-                                              {item.page_name}
-                                            </span>
-                                          </a>
-                                        </Link>
-                                      </li>
-                                    </React.Fragment>
-                                  ))}
-                                {/*<li>*/}
-                                {/*  <Link href="#">*/}
-                                {/*    <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:primary-text cursor-pointer">*/}
-                                {/*      Shop Category Icon*/}
-                                {/*    </span>*/}
-                                {/*  </Link>*/}
-                                {/*</li>*/}
-                                {/*<li>*/}
-                                {/*  <Link href="#">*/}
-                                {/*    <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:primary-text cursor-pointer">*/}
-                                {/*      Shop List View*/}
-                                {/*    </span>*/}
-                                {/*  </Link>*/}
-                                {/*</li>*/}
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  <li>
+                    <Link href="/" passHref>
+                      <a rel="noopener noreferrer">
+                        <span className="flex items-center text-sm font-600 cursor-pointer text-qblack ">
+                          {/* <span>{ServeLangItem()?.Sellers}</span> */}
+                          CONTACT LENSES
+                        </span>
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/" passHref>
+                      <a rel="noopener noreferrer">
+                        <span className="flex items-center text-sm font-600 cursor-pointer text-qblack ">
+                          {/* <span>{ServeLangItem()?.Sellers}</span> */}
+                          SUNGLASSES
+                        </span>
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/" passHref>
+                      <a rel="noopener noreferrer">
+                        <span className="flex items-center text-sm font-600 cursor-pointer text-qblack ">
+                          {/* <span>{ServeLangItem()?.Sellers}</span> */}
+                          GET APPOINTMENT
+                        </span>
+                      </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
             </div>
             {Multivendor() === 1 && (
-              <div className="become-seller-btn">
-                <Link href="/become-seller" passHref>
-                  <a rel="noopener noreferrer">
-                    <div className=" w-[161px] h-[40px] flex justify-center items-center cursor-pointer">
-                      <div className="flex rtl:space-x-reverse space-x-2 items-center">
-                        <span className="text-sm font-600">
-                          {ServeLangItem()?.Become_seller}
-                        </span>
-                        <span className="transform rtl:rotate-180 fill-current ">
-                          <svg
-                            width="6"
-                            height="10"
-                            viewBox="0 0 6 10"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="fill-current"
-                          >
-                            <rect
-                              x="1.08984"
-                              width="6.94106"
-                              height="1.54246"
-                              transform="rotate(45 1.08984 0)"
-                            />
-                            <rect
-                              x="6"
-                              y="4.9082"
-                              width="6.94106"
-                              height="1.54246"
-                              transform="rotate(135 6 4.9082)"
-                            />
-                          </svg>
-                        </span>
-                      </div>
-                    </div>
-                  </a>
-                </Link>
-              </div>
+              <Link href="/" passHref>
+                <a rel="noopener noreferrer">
+                  <span className="flex items-center text-sm font-600 cursor-pointer text-qblack ">
+                    {/* <span>{ServeLangItem()?.Sellers}</span> */}
+                    3D TRY ON
+                  </span>
+                </a>
+              </Link>
+              // <div className="become-seller-btn">
+              //   <Link href="/" passHref>
+              //     <a rel="noopener noreferrer">
+              //       <div className=" w-[161px] h-[40px] flex justify-center items-center cursor-pointer">
+              //         <div className="flex rtl:space-x-reverse space-x-2 items-center">
+              //           <span className="transform rtl:rotate-180 fill-current ">
+              //             <svg
+              //               width="6"
+              //               height="10"
+              //               viewBox="0 0 6 10"
+              //               fill="none"
+              //               xmlns="http://www.w3.org/2000/svg"
+              //               className="fill-current"
+              //             >
+              //               <rect
+              //                 x="1.08984"
+              //                 width="6.94106"
+              //                 height="1.54246"
+              //                 transform="rotate(45 1.08984 0)"
+              //               />
+              //               <rect
+              //                 x="6"
+              //                 y="4.9082"
+              //                 width="6.94106"
+              //                 height="1.54246"
+              //                 transform="rotate(135 6 4.9082)"
+              //               />
+              //             </svg>
+              //           </span>
+              //           <span className="text-sm font-600">
+              //             {/* {ServeLangItem()?.Become_seller} */}
+              //             3D TRY ON
+              //           </span>
+              //         </div>
+              //       </div>
+              //     </a>
+              //   </Link>
+              // </div>
             )}
           </div>
         </div>

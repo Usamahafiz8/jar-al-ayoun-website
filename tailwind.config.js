@@ -6,6 +6,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        qwhite: "#fffff",
+        primary: "#ED1B24",
         primarygray: "#f8f8f8",
         qblack: "#222222",
         qyellow: "#FCCA6A",

@@ -6,13 +6,13 @@ import { useDispatch, useSelector } from "react-redux";
 import apiRequest from "../../../../../utils/apiRequest";
 import { fetchWishlist } from "../../../../store/wishlistData";
 import Cart from "../../../Cart";
+import LoginContext from "../../../Contexts/LoginContext";
+import SearchBox from "../../../Helpers/SearchBox";
+import ServeLangItem from "../../../Helpers/ServeLangItem";
 import Compair from "../../../Helpers/icons/Compair";
 import ThinBag from "../../../Helpers/icons/ThinBag";
 import ThinLove from "../../../Helpers/icons/ThinLove";
 import ThinPeople from "../../../Helpers/icons/ThinPeople";
-import SearchBox from "../../../Helpers/SearchBox";
-import ServeLangItem from "../../../Helpers/ServeLangItem";
-import LoginContext from "../../../Contexts/LoginContext";
 export default function Middlebar({ className, settings }) {
   const router = useRouter();
   const dispatch = useDispatch();
@@ -55,7 +55,7 @@ export default function Middlebar({ className, settings }) {
                   {settings && (
                     <Image
                       width="153"
-                      height="44"
+                      height="140"
                       objectFit="scale-down"
                       src={`${
                         process.env.NEXT_PUBLIC_BASE_URL + settings.logo
@@ -66,59 +66,74 @@ export default function Middlebar({ className, settings }) {
                 </a>
               </Link>
             </div>
-            <div className="w-[517px] h-[44px]">
+            <div className="w-[600px] h-[44px]">
               <SearchBox className="search-com" />
             </div>
             <div className="flex space-x-6 rtl:space-x-reverse items-center relative">
-              <div className="compaire relative">
-                {auth ? (
-                  <Link href="/products-compaire" passHref>
-                    <a rel="noopener noreferrer">
-                      <span className="cursor-pointer">
-                        <Compair className="fill-current" />
-                      </span>
-                    </a>
-                  </Link>
-                ) : (
-                  <Link href="/login" passHref>
-                    <a rel="noopener noreferrer">
-                      <span className="cursor-pointer">
-                        <Compair className="fill-current" />
-                      </span>
-                    </a>
-                  </Link>
-                )}
+              <div className="flex flex-row gap-2">
+                <div className="compaire relative">
+                  {auth ? (
+                    <Link href="/products-compaire" passHref>
+                      <a rel="noopener noreferrer">
+                        <span className="cursor-pointer">
+                          <Compair className="fill-current" />
+                        </span>
+                      </a>
+                    </Link>
+                  ) : (
+                    <Link href="/login" passHref>
+                      <a rel="noopener noreferrer">
+                        <span className="cursor-pointer">
+                          <Compair className="fill-current" />
+                        </span>
+                      </a>
+                    </Link>
+                  )}
 
-                <span className="w-[18px] h-[18px] rounded-full  absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px]">
-                  {compareProducts ? compareProducts.products.length : 0}
-                </span>
-              </div>
-              <div className="favorite relative">
-                <Link href="/wishlist" passHref>
-                  <a rel="noopener noreferrer">
-                    <span className="cursor-pointer">
-                      <ThinLove className="fill-current" />
-                    </span>
-                  </a>
-                </Link>
-                <span className="w-[18px] h-[18px] rounded-full  absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px]">
-                  {wishlists ? wishlists.data.length : 0}
-                </span>
-              </div>
-              <div className="cart-wrapper group relative py-4">
-                <div className="cart relative cursor-pointer">
-                  <Link href="/cart" passHref>
-                    <a rel="noopener noreferrer">
-                      <span className="cursor-pointer">
-                        <ThinBag />
-                      </span>
-                    </a>
-                  </Link>
                   <span className="w-[18px] h-[18px] rounded-full  absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px]">
-                    {cartItems ? cartItems.length : 0}
+                    {compareProducts ? compareProducts.products.length : 0}
                   </span>
                 </div>
+                <span className="text-md leading-6 text-qblack font-500 cursor-pointer">
+                  Compare
+                </span>
+              </div>
 
+              <Link href="/wishlist" passHref>
+                <div className="flex flex-row gap-2">
+                  <div className="favorite relative">
+                    <a rel="noopener noreferrer">
+                      <span className="cursor-pointer">
+                        <ThinLove className="fill-current" />
+                      </span>
+                    </a>
+                    <span className="w-[18px] h-[18px] rounded-full  absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px]">
+                      {wishlists ? wishlists.data.length : 0}
+                    </span>
+                  </div>
+                  <span className="text-md leading-6 text-qblack font-500 cursor-pointer">
+                    WishList
+                  </span>
+                </div>
+              </Link>
+              <div className="cart-wrapper group relative py-4">
+                <div className="flex flex-row gap-2">
+                  <div className="cart relative cursor-pointer">
+                    <Link href="/cart" passHref>
+                      <a rel="noopener noreferrer">
+                        <span className="cursor-pointer">
+                          <ThinBag />
+                        </span>
+                      </a>
+                    </Link>
+                    <span className="w-[18px] h-[18px] rounded-full  absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px]">
+                      {cartItems ? cartItems.length : 0}
+                    </span>
+                  </div>
+                  <span className="text-md leading-6 text-qblack font-500 cursor-pointer">
+                    Cart
+                  </span>
+                </div>
                 <Cart className="absolute ltr:-right-[45px] rtl:-left-[45px] top-11 z-50 hidden group-hover:block" />
               </div>
               <div>
@@ -133,11 +148,16 @@ export default function Middlebar({ className, settings }) {
                   </button>
                 ) : (
                   <Link href="/login" passHref>
-                    <a rel="noopener noreferrer">
-                      <span className="cursor-pointer">
-                        <ThinPeople />
+                    <div className="flex flex-row gap-2">
+                      <a rel="noopener noreferrer">
+                        <span className="cursor-pointer">
+                          <ThinPeople />
+                        </span>
+                      </a>
+                      <span className="text-md leading-6 text-qblack font-500 cursor-pointer">
+                        Account
                       </span>
-                    </a>
+                    </div>
                   </Link>
                 )}
               </div>
