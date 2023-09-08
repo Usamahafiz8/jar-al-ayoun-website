@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.2",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@fortawesome/free-regular-svg-icons": "^6.1.1",
@@ -28,8 +29,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-facebook-pixel": "^1.0.4",
-    "react-range-slider-input": "^3.0.7",
     "react-paypal-button-v2": "^2.6.3",
+    "react-range-slider-input": "^3.0.7",
     "react-redux": "^8.0.2",
     "react-share": "^4.4.0",
     "react-slick": "^0.29.0",
