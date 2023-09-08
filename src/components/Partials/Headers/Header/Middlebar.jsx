@@ -44,32 +44,48 @@ export default function Middlebar({ className, settings }) {
   useEffect(() => {
     cart && setCartItem(cart.cartProducts);
   }, [cart]);
+
   return (
-    <div className={`w-full h-[86px] bg-white ${className}`}>
+    <div className={`w-full h-[96px] bg-white ${className}`}>
       <div className="container-x mx-auto h-full">
         <div className="relative h-full">
           <div className="flex justify-between items-center h-full">
-            <div className="relative">
+            <div className="flex flex-row justify-between items-center gap-4  ">
               <Link href="/" passHref>
                 <a rel="noopener noreferrer">
-                  {settings && (
+                  {/* {settings && (
                     <Image
                       width="153"
                       height="140"
                       objectFit="scale-down"
-                      src={`${
-                        process.env.NEXT_PUBLIC_BASE_URL + settings.logo
-                      }`}
+                      src={`
+                      ${process.env.NEXT_PUBLIC_BASE_URL + settings.logo}
+                      `}
                       alt="logo"
-                    />
-                  )}
+                      />
+                    )} */}
+                  <Image
+                    src="/assets/images/logo.png" // Use the correct path to your PNG image
+                    alt="Jar al ayoun"
+                    width={60}
+                    height={90}
+                  />
                 </a>
               </Link>
+              <div className="flex flex-col items-center ">
+                <span className="text-xl text-qblack font-800 cursor-pointer">
+                  Jar al ayoun
+                </span>
+                <span className="text-sm text-qblack font-500">
+                  OPTICAL STORE
+                </span>
+              </div>
             </div>
             <div className="w-[600px] h-[44px]">
               <SearchBox className="search-com" />
             </div>
-            <div className="flex space-x-6 rtl:space-x-reverse items-center relative">
+
+            <div className="flex gap-4 items-center relative">
               <div className="flex flex-row gap-2">
                 <div className="compaire relative">
                   {auth ? (

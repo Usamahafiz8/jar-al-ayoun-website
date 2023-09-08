@@ -8,6 +8,7 @@ module.exports = {
       colors: {
         qwhite: "#fffff",
         primary: "#ED1B24",
+        trasparent: "#FFF5F5",
         primarygray: "#f8f8f8",
         qblack: "#222222",
         qyellow: "#FCCA6A",

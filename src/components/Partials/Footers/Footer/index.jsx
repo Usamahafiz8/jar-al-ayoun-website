@@ -2,10 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import Facebook from "../../../Helpers/icons/Facebook";
-import Instagram from "../../../Helpers/icons/Instagram";
-import Youtube from "../../../Helpers/icons/Youtube";
 import FontAwesomeCom from "../../../Helpers/icons/FontAwesomeCom";
+
 export default function Footer({ settings }) {
   const { websiteSetup } = useSelector((state) => state.websiteSetup);
   const [firstCol, setFirstCol] = useState(null);
@@ -62,171 +60,11 @@ export default function Footer({ settings }) {
 
   return (
     <footer className="footer-section-wrapper bg-white print:hidden">
-      <div className="container-x block mx-auto pt-[56px]">
-        <div className="w-full flex flex-col items-center mb-[50px]">
-          {/* logo area */}
-          <div className="mb-[40px]">
-            <Link href="/" passHref>
-              <a>
-                {settings && (
-                  <Image
-                    width="153"
-                    height="44"
-                    objectFit="scale-down"
-                    src={`${process.env.NEXT_PUBLIC_BASE_URL + settings.logo}`}
-                    alt="logo"
-                  />
-                )}
-              </a>
-            </Link>
-          </div>
-          <div className="w-full h-[1px] bg-[#E9E9E9]"></div>
-        </div>
-        <div className="lg:flex justify-between mb-[50px]">
-          <div className="lg:w-[424px]  ml-0 w-full mb-10 lg:mb-0">
-            <h1 className="text-[18] font-500 text-[#2F2F2F] mb-5">About Us</h1>
-            <p className="text-[#9A9A9A] text-[15px] w-[247px] leading-[28px]">
-              {footerContent && footerContent.about_us}
-            </p>
-            {/*<p className="text-[#9A9A9A] text-[15px] w-[247px] leading-[28px]">*/}
-            {/*  {footerContent && footerContent.email ? footerContent.email : ""}*/}
-            {/*</p>*/}
-            {/*<p className="text-[#9A9A9A] text-[15px] w-[247px] leading-[28px]">*/}
-            {/*  {footerContent && footerContent.address*/}
-            {/*    ? footerContent.address*/}
-            {/*    : ""}*/}
-            {/*</p>*/}
-            {/*<div>*/}
-            {/*  <ul className="flex flex-col space-y-4 ">*/}
-            {/*    <li>*/}
-            {/*      <Link href="/tracking-order">*/}
-            {/*        <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack cursor-pointer capitalize">*/}
-            {/*          Track Order*/}
-            {/*        </span>*/}
-            {/*      </Link>*/}
-            {/*    </li>*/}
-            {/*    <li>*/}
-            {/*      <Link href="/faq">*/}
-            {/*        <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack cursor-pointer capitalize">*/}
-            {/*          Support*/}
-            {/*        </span>*/}
-            {/*      </Link>*/}
-            {/*    </li>*/}
-            {/*    */}
-            {/*  </ul>*/}
-            {/*</div>*/}
-          </div>
-          <div className="flex-1 lg:flex">
-            <div className="lg:w-1/3 w-full mb-10 lg:mb-0">
-              {firstCol && (
-                <>
-                  <div className="mb-5">
-                    <h6 className="text-[18] font-500 text-[#2F2F2F]">
-                      {firstCol.columnTitle}
-                    </h6>
-                  </div>
-                  <div>
-                    <ul className="flex flex-col space-y-4 ">
-                      {firstCol.col_links.length > 0 &&
-                        firstCol.col_links.map((item, i) => (
-                          <li key={i}>
-                            <Link href={item.link} passHref>
-                              <a rel="noopener noreferrer">
-                                <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack cursor-pointer capitalize">
-                                  {item.title}
-                                </span>
-                              </a>
-                            </Link>
-                          </li>
-                        ))}
-                    </ul>
-                  </div>
-                </>
-              )}
-            </div>
-            <div className="lg:w-1/3 lg:flex lg:flex-col items-center w-full mb-10 lg:mb-0 ">
-              <div>
-                {secondCol && (
-                  <>
-                    <div className="mb-5">
-                      <h6 className="text-[18] font-500 text-[#2F2F2F]">
-                        {secondCol.columnTitle}
-                      </h6>
-                    </div>
-                    <div>
-                      <ul className="flex flex-col space-y-4 ">
-                        {secondCol.col_links.length > 0 &&
-                          secondCol.col_links.map((item, i) => (
-                            <li key={i}>
-                              <Link href={item.link} passHref>
-                                <a rel="noopener noreferrer">
-                                  <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack cursor-pointer capitalize">
-                                    {item.title}
-                                  </span>
-                                </a>
-                              </Link>
-                            </li>
-                          ))}
-                      </ul>
-                    </div>
-                  </>
-                )}
-              </div>
-            </div>
-            <div className="lg:w-1/3 lg:flex lg:flex-col items-center w-full mb-10 lg:mb-0">
-              <div>
-                {thirdCol && (
-                  <>
-                    <div className="mb-5">
-                      <h6 className="text-[18] font-500 text-[#2F2F2F]">
-                        {thirdCol.columnTitle}
-                      </h6>
-                    </div>
-                    <div>
-                      <ul className="flex flex-col space-y-4 ">
-                        {thirdCol.col_links.length > 0 &&
-                          thirdCol.col_links.map((item, i) => (
-                            <li key={i}>
-                              <Link href={item.link} passHref>
-                                <a rel="noopener noreferrer">
-                                  <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack cursor-pointer capitalize">
-                                    {item.title}
-                                  </span>
-                                </a>
-                              </Link>
-                            </li>
-                          ))}
-                      </ul>
-                    </div>
-                  </>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="bottom-bar border-t border-qgray-border lg:h-[82px] flex lg:flex-row flex-col-reverse
-         justify-between items-center"
-        >
-          <div className="flex rtl:space-x-reverse lg:space-x-5 space-x-2.5 justify-between items-center mb-3">
-            <div className="flex rtl:space-x-reverse space-x-5 items-center">
-              {socialLink &&
-                socialLink.length > 0 &&
-                socialLink.map((item, i) => (
-                  <a key={i} href={item.link} target="_blank" rel="noreferrer">
-                    <FontAwesomeCom
-                      className="w-4 h-4 text-qgray"
-                      icon={item.icon}
-                    />
-                  </a>
-                ))}
-            </div>
-            <span className="sm:text-base text-[10px] text-qgray font-300">
-              {footerContent && footerContent.copyright
-                ? footerContent.copyright
-                : ""}
-            </span>
-          </div>
+      <div className="w-full flex flex-col items-center ">
+        <div className="w-full bg-trasparent p-2  flex flex-row justify-between items-center ">
+          <span className="text-sm text-qblack font-600 cursor-pointer">
+            We guarantee every transaction is 100% secure.
+          </span>
           {footerContent && footerContent.payment_image ? (
             <div className="mt-2 lg:mt-0">
               <Link href="#" passHref>
@@ -246,6 +84,206 @@ export default function Footer({ settings }) {
           ) : (
             ""
           )}
+          <span className="text-sm text-qblack font-600 cursor-pointer">
+            Also Available On:
+          </span>
+        </div>
+      </div>
+      <div className="container-x block mx-auto pt-[30px]">
+        <div className="md:flex xl:flex pb-[30px]">
+          <div className="md:w-2/6 xl:w-2/6 sm:w-1/2 w-full mb-10 md:mb-0">
+            <div className="lg:w-[424px]  ml-0 w-full mb-10 lg:mb-0">
+              <div className="flex flex-row items-center gap-8">
+                <Link href="/" passHref>
+                  <a rel="noopener noreferrer">
+                    <Image
+                      src="/assets/images/logo.png" // Use the correct path to your PNG image
+                      alt="Jar al ayoun"
+                      width={60}
+                      height={90}
+                    />
+                  </a>
+                </Link>
+                <div className="flex flex-col items-center ">
+                  <span className="text-xl text-qblack font-700 cursor-pointer">
+                    JAR Al Ayoun
+                  </span>
+                  <span className="text-sm text-qblack font-400">
+                    OPTICAL STORE
+                  </span>
+                </div>
+              </div>
+              <p className="text-[#9A9A9A] text-[15px] w-[247px] leading-[28px]">
+                some sample text write here about jar store
+              </p>
+              <br />
+              <p className="text-[#9A9A9A] text-[15px] w-[247px] leading-[28px]">
+                jar al ayoun head office
+              </p>
+              <p className="text-[#9A9A9A] text-[15px] w-[247px] leading-[28px]">
+                +966 51 00000
+              </p>
+              <p className="text-[#9A9A9A] text-[15px] w-[247px] leading-[28px]">
+                info@jaralayoun
+              </p>
+            </div>
+          </div>
+          <div className="md:w-1/6 xl:w-1/6 sm:w-1/2 w-full mb-10 md:mb-0">
+            {firstCol && (
+              <>
+                <div className="mb-5">
+                  <h6 className="text-lg text-qblack font-700 ">
+                    {firstCol.columnTitle}
+                  </h6>
+                </div>
+                <div>
+                  <ul className="flex flex-col space-y-4 ">
+                    {firstCol.col_links.length > 0 &&
+                      firstCol.col_links.map((item, i) => (
+                        <li key={i}>
+                          <Link href={item.link} passHref>
+                            <a rel="noopener noreferrer">
+                              <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack cursor-pointer capitalize">
+                                {item.title}
+                              </span>
+                            </a>
+                          </Link>
+                        </li>
+                      ))}
+                  </ul>
+                </div>
+              </>
+            )}
+          </div>
+          <div className="md:w-1/6 xl:w-1/6 sm:w-1/2 w-full mb-10 md:mb-0">
+            {secondCol && (
+              <>
+                <div className="mb-5">
+                  <h6 className="text-lg text-qblack font-700 ">
+                    {secondCol.columnTitle}
+                  </h6>
+                </div>
+                <div>
+                  <ul className="flex flex-col space-y-4 ">
+                    {secondCol.col_links.length > 0 &&
+                      secondCol.col_links.map((item, i) => (
+                        <li key={i}>
+                          <Link href={item.link} passHref>
+                            <a rel="noopener noreferrer">
+                              <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack cursor-pointer capitalize">
+                                {item.title}
+                              </span>
+                            </a>
+                          </Link>
+                        </li>
+                      ))}
+                  </ul>
+                </div>
+              </>
+            )}
+          </div>
+          <div className="md:w-1/6 xl:w-1/6 sm:w-1/2 w-full mb-10 md:mb-0">
+            {thirdCol && (
+              <>
+                <div className="mb-5">
+                  <h6 className="text-lg text-qblack font-700 ">
+                    {thirdCol.columnTitle}
+                  </h6>
+                </div>
+                <div>
+                  <ul className="flex flex-col space-y-4 ">
+                    {thirdCol.col_links.length > 0 &&
+                      thirdCol.col_links.map((item, i) => (
+                        <li key={i}>
+                          <Link href={item.link} passHref>
+                            <a rel="noopener noreferrer">
+                              <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack cursor-pointer capitalize">
+                                {item.title}
+                              </span>
+                            </a>
+                          </Link>
+                        </li>
+                      ))}
+                  </ul>
+                </div>
+              </>
+            )}
+          </div>
+          <div className="md:w-1/6 xl:w-1/6 sm:w-1/2 w-full mb-10 md:mb-0">
+            {thirdCol && (
+              <>
+                <div className="mb-5">
+                  <h6 className="text-lg text-qblack font-700 ">
+                    {thirdCol.columnTitle}
+                  </h6>
+                </div>
+                <div>
+                  <ul className="flex flex-col space-y-4 ">
+                    {thirdCol.col_links.length > 0 &&
+                      thirdCol.col_links.map((item, i) => (
+                        <li key={i}>
+                          <Link href={item.link} passHref>
+                            <a rel="noopener noreferrer">
+                              <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack cursor-pointer capitalize">
+                                {item.title}
+                              </span>
+                            </a>
+                          </Link>
+                        </li>
+                      ))}
+                  </ul>
+                </div>
+              </>
+            )}
+          </div>
+          <div className="md:w-2/6 xl:w-2/6 sm:w-1/2 w-full mb-10 md:mb-0">
+            <div className="flex flex-col items-center ">
+              <span className="text-xl text-qblack font-700 ">Instagram</span>
+              <span className="text-sm text-qblack font-400">
+                Instagram API
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div className="w-full h-[1px] bg-primary"></div>
+        <div
+          className="bottom-bar border-t border-qgray-border lg:h-[82px] flex lg:flex-row flex-col-reverse
+         justify-between items-center"
+        >
+          <div className="flex rtl:space-x-reverse lg:space-x-5 space-x-2.5 justify-between items-center mb-3">
+            <span className="sm:text-base text-[10px] text-qblack font-500">
+              {footerContent && footerContent.copyright
+                ? footerContent.copyright
+                : ""}
+            </span>
+          </div>
+          <div className="flex flex-col items-center">
+            <span className="sm:text-base text-[10px] text-qblack font-700 ">
+              <div className="flex rtl:space-x-reverse space-x-5 items-center  ">
+                <span className="text-md text-qblack font-700">Follow Us:</span>
+                {socialLink &&
+                  socialLink.length > 0 &&
+                  socialLink.map((item, i) => (
+                    <a
+                      key={i}
+                      href={item.link}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <FontAwesomeCom
+                        className="w-4 h-4 text-primary"
+                        icon={item.icon}
+                      />
+                    </a>
+                  ))}
+              </div>
+            </span>
+
+            <span className="text-sm text-qblack font-400">
+              Up to 5 % discount on your first subscription
+            </span>
+          </div>
         </div>
       </div>
     </footer>
