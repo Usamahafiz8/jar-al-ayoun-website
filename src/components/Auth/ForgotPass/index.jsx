@@ -1,13 +1,13 @@
+import Image from "next/dist/client/image";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import apiRequest from "../../../../utils/apiRequest";
 import InputCom from "../../Helpers/InputCom";
 import LoaderStyleOne from "../../Helpers/Loaders/LoaderStyleOne";
-import Layout from "../../Partials/Layout";
-import { useSelector } from "react-redux";
-import Image from "next/dist/client/image";
 import ServeLangItem from "../../Helpers/ServeLangItem";
+import Layout from "../../Partials/Layout";
 
 export default function ForgotPass() {
   const { websiteSetup } = useSelector((state) => state.websiteSetup);
@@ -106,7 +106,7 @@ export default function ForgotPass() {
                       >
                         <path
                           d="M1 28.8027C17.6508 20.3626 63.9476 8.17089 113.509 17.8802C166.729 28.3062 341.329 42.704 353 1"
-                          stroke="#FCBF49"
+                          stroke="#ED1B24"
                           strokeWidth="2"
                           strokeLinecap="round"
                         />
@@ -164,7 +164,7 @@ export default function ForgotPass() {
                       >
                         <path
                           d="M1 28.8027C17.6508 20.3626 63.9476 8.17089 113.509 17.8802C166.729 28.3062 341.329 42.704 353 1"
-                          stroke="#FCBF49"
+                          stroke="#ED1B24"
                           strokeWidth="2"
                           strokeLinecap="round"
                         />

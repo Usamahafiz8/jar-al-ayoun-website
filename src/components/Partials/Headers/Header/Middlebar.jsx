@@ -50,7 +50,7 @@ export default function Middlebar({ className, settings }) {
       <div className="container-x mx-auto h-full">
         <div className="relative h-full">
           <div className="flex justify-between items-center h-full">
-            <div className="flex flex-row justify-between items-center gap-4  ">
+            <div className="flex flex-row justify-between items-center gap-4 w-200  ">
               <Link href="/" passHref>
                 <a rel="noopener noreferrer">
                   {/* {settings && (
@@ -72,8 +72,8 @@ export default function Middlebar({ className, settings }) {
                   />
                 </a>
               </Link>
-              <div className="flex flex-col items-center ">
-                <span className="text-xl text-qblack font-800 cursor-pointer">
+              <div className="flex flex-col items-center  ">
+                <span className="text-xl  text-qblack font-800 cursor-pointer">
                   Jar al ayoun
                 </span>
                 <span className="text-sm text-qblack font-500">
@@ -106,7 +106,7 @@ export default function Middlebar({ className, settings }) {
                     </Link>
                   )}
 
-                  <span className="w-[18px] h-[18px] rounded-full  absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px]">
+                  <span className="w-[18px] h-[18px] text-qwhite rounded-full  absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px]">
                     {compareProducts ? compareProducts.products.length : 0}
                   </span>
                 </div>

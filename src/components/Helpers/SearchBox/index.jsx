@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import auth from "../../../../utils/auth";
 import LoginContext from "../../Contexts/LoginContext";
 import ServeLangItem from "../ServeLangItem";
+import SearchIcon from "../icons/Search";
 
 export default function SearchBox({ className }) {
   const router = useRouter();
@@ -93,7 +94,7 @@ export default function SearchBox({ className }) {
             />
           </div>
         </div>
-        {/* <div className="flex-1 flex items-center px-4 relative">
+        <div className="flex-1 flex items-center px-4 relative">
           <button
             onClick={() => setToggleCat(!toggleCat)}
             type="button"
@@ -152,15 +153,24 @@ export default function SearchBox({ className }) {
               </div>
             </>
           )}
-        </div> */}
+        </div>
         {/* <div className="w-[1px] h-[22px] bg-qgray-border"></div> */}
+        <input
+          value={searchKey}
+          onKeyDown={(e) => e.key === "Enter" && searchHandler()}
+          onChange={(e) => setSearchkey(e.target.value)}
+          type="text"
+          className="search-input"
+          placeholder={ServeLangItem()?.Search_products + "..."}
+        />
 
         <button
           onClick={searchHandler}
-          className="search-btn w-[93px]  h-full text-sm font-600  "
+          className="w-[93px]  h-full text-sm font-600  "
           type="button"
         >
-          {ServeLangItem()?.Search}
+          <SearchIcon />
+          {/* {ServeLangItem()?.Search}  */}
         </button>
       </div>
     </>

@@ -1,12 +1,13 @@
+import { useState } from "react";
+import { toast } from "react-toastify";
+import apiRequest from "../../../utils/apiRequest";
 import Accodion from "../Helpers/Accodion";
 import InputCom from "../Helpers/InputCom";
-import PageTitle from "../Helpers/PageTitle";
-import Layout from "../Partials/Layout";
-import { useState } from "react";
-import apiRequest from "../../../utils/apiRequest";
 import LoaderStyleOne from "../Helpers/Loaders/LoaderStyleOne";
-import { toast } from "react-toastify";
+import PageTitle from "../Helpers/PageTitle";
 import ServeLangItem from "../Helpers/ServeLangItem";
+import CureveICon from "../Helpers/icons/Curvelive";
+import Layout from "../Partials/Layout";
 export default function Faq({ datas }) {
   const { faqs } = datas;
   const [name, setName] = useState("");
@@ -75,7 +76,7 @@ export default function Faq({ datas }) {
                   <h1 className="lg:text-[34px] text-xl font-bold text-qblack">
                     {ServeLangItem()?.Have_Any_Qustion}
                   </h1>
-                  <span className="-mt-3 block">
+                  {/* <span className="-mt-3 block">
                     <svg
                       width="354"
                       height="30"
@@ -85,12 +86,13 @@ export default function Faq({ datas }) {
                     >
                       <path
                         d="M1 28.8027C17.6508 20.3626 63.9476 8.17089 113.509 17.8802C166.729 28.3062 341.329 42.704 353 1"
-                        stroke="#FCBF49"
+                        stroke="#ED1B24"
                         strokeWidth="2"
                         strokeLinecap="round"
                       />
                     </svg>
-                  </span>
+                  </span> */}
+                  <CureveICon />
                 </div>
                 <div className="inputs mt-5">
                   <div className="mb-4">

@@ -24,7 +24,7 @@ export default function LoaderStyleTwo() {
             ry="6"
             width="6"
             height="12"
-            fill="#FCBF49"
+            fill="#ED1B24"
           >
             <animate
               attributeName="opacity"
@@ -44,7 +44,7 @@ export default function LoaderStyleTwo() {
             ry="6"
             width="6"
             height="12"
-            fill="#FCBF49"
+            fill="#ED1B24"
           >
             <animate
               attributeName="opacity"
@@ -64,7 +64,7 @@ export default function LoaderStyleTwo() {
             ry="6"
             width="6"
             height="12"
-            fill="#FCBF49"
+            fill="#ED1B24"
           >
             <animate
               attributeName="opacity"
@@ -84,7 +84,7 @@ export default function LoaderStyleTwo() {
             ry="6"
             width="6"
             height="12"
-            fill="#FCBF49"
+            fill="#ED1B24"
           >
             <animate
               attributeName="opacity"
@@ -104,7 +104,7 @@ export default function LoaderStyleTwo() {
             ry="6"
             width="6"
             height="12"
-            fill="#FCBF49"
+            fill="#ED1B24"
           >
             <animate
               attributeName="opacity"
@@ -124,7 +124,7 @@ export default function LoaderStyleTwo() {
             ry="6"
             width="6"
             height="12"
-            fill="#FCBF49"
+            fill="#ED1B24"
           >
             <animate
               attributeName="opacity"
@@ -144,7 +144,7 @@ export default function LoaderStyleTwo() {
             ry="6"
             width="6"
             height="12"
-            fill="#FCBF49"
+            fill="#ED1B24"
           >
             <animate
               attributeName="opacity"
@@ -164,7 +164,7 @@ export default function LoaderStyleTwo() {
             ry="6"
             width="6"
             height="12"
-            fill="#FCBF49"
+            fill="#ED1B24"
           >
             <animate
               attributeName="opacity"
@@ -184,7 +184,7 @@ export default function LoaderStyleTwo() {
             ry="6"
             width="6"
             height="12"
-            fill="#FCBF49"
+            fill="#ED1B24"
           >
             <animate
               attributeName="opacity"
@@ -204,7 +204,7 @@ export default function LoaderStyleTwo() {
             ry="6"
             width="6"
             height="12"
-            fill="#FCBF49"
+            fill="#ED1B24"
           >
             <animate
               attributeName="opacity"
@@ -224,7 +224,7 @@ export default function LoaderStyleTwo() {
             ry="6"
             width="6"
             height="12"
-            fill="#FCBF49"
+            fill="#ED1B24"
           >
             <animate
               attributeName="opacity"
@@ -244,7 +244,7 @@ export default function LoaderStyleTwo() {
             ry="6"
             width="6"
             height="12"
-            fill="#FCBF49"
+            fill="#ED1B24"
           >
             <animate
               attributeName="opacity"

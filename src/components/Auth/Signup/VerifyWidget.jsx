@@ -1,10 +1,10 @@
+import { useRouter } from "next/router";
 import React, { useState } from "react";
-import ServeLangItem from "../../Helpers/ServeLangItem";
-import InputCom from "../../Helpers/InputCom";
 import { toast } from "react-toastify";
 import apiRequest from "../../../../utils/apiRequest";
-import { useRouter } from "next/router";
+import InputCom from "../../Helpers/InputCom";
 import LoaderStyleOne from "../../Helpers/Loaders/LoaderStyleOne";
+import ServeLangItem from "../../Helpers/ServeLangItem";
 
 function VerifyWidget({ redirect = true, verifyActionPopup }) {
   const router = useRouter();
@@ -61,7 +61,7 @@ function VerifyWidget({ redirect = true, verifyActionPopup }) {
           >
             <path
               d="M1 28.8027C17.6508 20.3626 63.9476 8.17089 113.509 17.8802C166.729 28.3062 341.329 42.704 353 1"
-              stroke="#FCBF49"
+              stroke="#ED1B24"
               strokeWidth="2"
               strokeLinecap="round"
             />

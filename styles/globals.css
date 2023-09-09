@@ -122,23 +122,24 @@ body {
 }
 
 .primary-bg {
-  background: var(--primary-color);
+  background: #ED1B24;
+  color: #ffffff;
 }
 
 .primary-text {
-  color: var(--primary-color);
+  color: #ED1B24;
 }
 
 .primary-border {
-  border-color: var(--primary-color);
+  border-color: #ED1B24;
 }
 
 .hover-ico:hover {
-  background: var(--primary-color);
+  background: #ED1B24;
 }
 
 .hover-primary-bg:hover {
-  background: var(--primary-color);
+  background: #ED1B24;
 }
 
 .blog .details :is(p, span) {
@@ -188,7 +189,7 @@ body {
   display: inline-block;
   width: 25px;
   height: 25px;
-  background: var(--primary-color);
+  background: #ED1B24;
   color: white;
   font-weight: bold;
   border-radius: 50%;
@@ -200,7 +201,7 @@ body {
 .product-specifications ul li::before {
   content: "\2713";
   display: inline-block;
-  color: #FCBF49;
+  color: #ED1B24;
   font-weight: bold;
   border-radius: 50%;
   text-align: center;
@@ -286,8 +287,8 @@ body {
 }
 
 .yellow-btn {
-  @apply w-full text-[13px] text-qblacktext font-semibold flex justify-center items-center h-full;
-  background: var(--primary-color);
+  @apply w-full text-[13px] text-white font-semibold flex justify-center items-center h-full;
+  background: #ED1B24;
   line-height: 0;
 }
 
@@ -355,7 +356,7 @@ body {
 }
 
 .bank-info-alert::-webkit-scrollbar-thumb {
-  background: #FCBF49;
+  background: #ED1B24;
 }
 
 .bank-info-alert::-webkit-scrollbar-track {
@@ -453,7 +454,7 @@ body {
 
 .main-wrapper-card span.anim {
   position: absolute;
-  background-color: var(--primary-color);
+  background-color: #ED1B24;
   transform-origin: center;
   transition: transform 0.5s ease;
 }
@@ -514,18 +515,19 @@ body {
 }
 
 .cart-wrappwer {
-  border-color: var(--primary-color);
+  border-color: #ED1B24;
 }
 
 .quomodo-shop-middle-bar :is(.compaire>span, .favorite>span, .cart-wrapper .cart>span) {
 
-  @apply text-qblack;
-  background: var(--primary-color);
+  @apply text-qwhite;
+  color: white;
+  background: #ED1B24;
 
 }
 
 .quomodo-shop-middle-bar .cart-wrapper .cart-wrappwer {
-  border-color: var(--primary-color);
+  border-color: #ED1B24;
 }
 
 .nav-widget-wrapper .nav .nav-wrapper li {
@@ -545,7 +547,7 @@ body {
 }
 
 .nav-widget-wrapper .category-dropdown .categories-list .category-item:hover {
-  background: var(--primary-color);
+  background: #ED1B24;
 }
 
 .nav-widget-wrapper .category-dropdown .categories-list .category-item .sub-category-lvl-two ul li.category-item {
@@ -553,7 +555,7 @@ body {
 }
 
 .nav-widget-wrapper .category-dropdown .categories-list .category-item .sub-category-lvl-two ul li.category-item:hover {
-  background: var(--primary-color);
+  background: #ED1B24;
 }
 
 .nav-widget-wrapper .category-dropdown .categories-list .category-item .sub-category-lvl-two .sub-category-lvl-three ul li.category-item {
@@ -561,7 +563,7 @@ body {
 }
 
 .nav-widget-wrapper .category-dropdown .categories-list .category-item .sub-category-lvl-two .sub-category-lvl-three ul li.category-item:hover {
-  background: var(--primary-color);
+  background: #ED1B24;
 }
 
 /*TODO: ========== home two =============*/
@@ -588,7 +590,7 @@ body {
 
 .home-two .nav-widget-wrapper .become-seller-btn {
   @apply text-qblack;
-  background: var(--primary-color);
+  background: #ED1B24;
 }
 
 .home-two .quomodo-shop-middle-bar .cart-wrapper .cart-wrappwer {
@@ -722,7 +724,7 @@ body {
 
 .range-slider .range-slider__thumb,
 .range-slider .range-slider__range {
-  background: var(--primary-color) !important;
+  background: #ED1B24 !important;
 }
 
 .range-slider .range-slider__thumb {

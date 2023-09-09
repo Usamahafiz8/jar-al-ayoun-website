@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import ServeLangItem from "../../../Helpers/ServeLangItem";
 import Arrow from "../../../Helpers/icons/Arrow";
+import Fire from "../../../Helpers/icons/Fire";
 import FontAwesomeCom from "../../../Helpers/icons/FontAwesomeCom";
 import Multivendor from "../../../Shared/Multivendor";
 export default function Navbar({ className }) {
@@ -368,9 +369,10 @@ export default function Navbar({ className }) {
 
                   <li>
                     <Link href="/" passHref>
-                      <a rel="noopener noreferrer">
-                        <span className="flex items-center text-sm font-600 cursor-pointer text-qblack ">
+                      <a rel="noopener noreferrer ">
+                        <span className="flex flex-row gap-1 items-center text-sm font-600 cursor-pointer text-qblack ">
                           {/* <span>{ServeLangItem()?.Sellers}</span> */}
+                          <Fire />
                           Deals
                         </span>
                       </a>
@@ -381,7 +383,7 @@ export default function Navbar({ className }) {
                       <a rel="noopener noreferrer">
                         <span className="flex items-center text-sm font-600 cursor-pointer text-qblack ">
                           {/* <span>{ServeLangItem()?.Sellers}</span> */}
-                          EYEGLASSES
+                          EYE GLASSES
                         </span>
                       </a>
                     </Link>

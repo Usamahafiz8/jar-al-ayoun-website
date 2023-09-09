@@ -3,6 +3,10 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import FontAwesomeCom from "../../../Helpers/icons/FontAwesomeCom";
+import LockIcom from "../../../Helpers/icons/LockIcon";
+import MailIcon from "../../../Helpers/icons/Mail";
+import PhoneIcon from "../../../Helpers/icons/Phone";
+import Location from "../../../Helpers/icons/location";
 
 export default function Footer({ settings }) {
   const { websiteSetup } = useSelector((state) => state.websiteSetup);
@@ -62,8 +66,9 @@ export default function Footer({ settings }) {
     <footer className="footer-section-wrapper bg-white print:hidden">
       <div className="w-full flex flex-col items-center ">
         <div className="w-full bg-trasparent p-2  flex flex-row justify-between items-center ">
-          <span className="text-sm text-qblack font-600 cursor-pointer">
-            We guarantee every transaction is 100% secure.
+          <span className="text-sm flex flex-row  items-center  gap-1 text-qblack font-600 cursor-pointer">
+            <LockIcom className={"w-5 h-5"} /> We guarantee every transaction is
+            100% secure.
           </span>
           {footerContent && footerContent.payment_image ? (
             <div className="mt-2 lg:mt-0">
@@ -117,14 +122,14 @@ export default function Footer({ settings }) {
                 some sample text write here about jar store
               </p>
               <br />
-              <p className="text-[#9A9A9A] text-[15px] w-[247px] leading-[28px]">
-                jar al ayoun head office
+              <p className="text-qblack flex flex-row  items-center  gap-1 text-[15px] w-[247px] leading-[28px]">
+                <Location className={"w-5 h-5"} /> jar al ayoun head office
               </p>
-              <p className="text-[#9A9A9A] text-[15px] w-[247px] leading-[28px]">
-                +966 51 00000
+              <p className="text-qblack flex flex-row items-center  gap-1 text-[15px] w-[247px] leading-[28px]">
+                <PhoneIcon className={"w-5 h-5"} /> +966 51 00000
               </p>
-              <p className="text-[#9A9A9A] text-[15px] w-[247px] leading-[28px]">
-                info@jaralayoun
+              <p className="text-qblack text-[15px] flex items-center  gap-1 flex-row w-[247px] leading-[28px]">
+                <MailIcon className={'"w-5 h-5'} /> info@jaralayoun
               </p>
             </div>
           </div>

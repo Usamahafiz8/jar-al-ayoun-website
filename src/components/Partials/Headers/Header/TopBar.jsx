@@ -48,6 +48,7 @@ export default function TopBar({ className, contact }) {
                     </a>
                   </Link>
                 </li>
+                <li>|</li>
                 <li>
                   <Link href="/faq" passHref>
                     <a rel="noopener noreferrer">
@@ -58,6 +59,7 @@ export default function TopBar({ className, contact }) {
                     </a>
                   </Link>
                 </li>
+                <li>|</li>
                 <li>
                   <Link href="/tracking-order" passHref>
                     <a rel="noopener noreferrer">
@@ -68,6 +70,7 @@ export default function TopBar({ className, contact }) {
                     </a>
                   </Link>
                 </li>
+                <li>|</li>
                 <li>
                   <Link href="/tracking-order" passHref>
                     <a rel="noopener noreferrer">

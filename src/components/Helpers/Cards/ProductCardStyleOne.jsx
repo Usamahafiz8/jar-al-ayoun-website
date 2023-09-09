@@ -1,4 +1,5 @@
 import axios from "axios";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
@@ -10,15 +11,14 @@ import settings from "../../../../utils/settings";
 import { fetchCart } from "../../../store/Cart";
 import { fetchCompareProducts } from "../../../store/compareProduct";
 import { fetchWishlist } from "../../../store/wishlistData";
+import LoginContext from "../../Contexts/LoginContext";
 import CheckProductIsExistsInFlashSale from "../../Shared/CheckProductIsExistsInFlashSale";
 import ProductView from "../../SingleProductPage/ProductView";
+import ServeLangItem from "../ServeLangItem";
 import Compair from "../icons/Compair";
 import QuickViewIco from "../icons/QuickViewIco";
 import Star from "../icons/Star";
 import ThinLove from "../icons/ThinLove";
-import Image from "next/image";
-import ServeLangItem from "../ServeLangItem";
-import LoginContext from "../../Contexts/LoginContext";
 
 const Redirect = () => {
   return (
@@ -127,15 +127,15 @@ export default function ProductCardStyleOne({ datas }) {
       token: auth() && auth().access_token,
       quantity: 1,
       variants:
-          getFirstVarients &&
-          getFirstVarients.length > 0 &&
-          getFirstVarients.map((v) =>
-              v ? parseInt(v.product_variant_id) : null
-          ),
+        getFirstVarients &&
+        getFirstVarients.length > 0 &&
+        getFirstVarients.map((v) =>
+          v ? parseInt(v.product_variant_id) : null
+        ),
       variantItems:
-          getFirstVarients &&
-          getFirstVarients.length > 0 &&
-          getFirstVarients.map((v) => (v ? v.id : null)),
+        getFirstVarients &&
+        getFirstVarients.length > 0 &&
+        getFirstVarients.map((v) => (v ? v.id : null)),
     };
     if (auth()) {
       if (varients) {
@@ -186,7 +186,10 @@ export default function ProductCardStyleOne({ datas }) {
         dispatch(fetchCart());
       }
     } else {
-      localStorage.setItem("data-hold", JSON.stringify({type:"add-to-cart",...data}));
+      localStorage.setItem(
+        "data-hold",
+        JSON.stringify({ type: "add-to-cart", ...data })
+      );
       loginPopupBoard.handlerPopup(true);
     }
   };
@@ -257,7 +260,7 @@ export default function ProductCardStyleOne({ datas }) {
       >
         <div className="product-card-img w-full h-[300px] -mt-2">
           <div
-            className="w-full h-full relative flex justify-center items-center transform scale-100 group-hover:scale-110 transition duration-300 ease-in-out"
+            className="w-full h-full p-1 relative flex justify-center items-center transform scale-100 group-hover:scale-110 transition duration-300 ease-in-out"
             // style={{
             //   background: `url(${datas.image}) no-repeat center`,
             //   backgroundSize: "contain",
@@ -271,46 +274,6 @@ export default function ProductCardStyleOne({ datas }) {
               onLoadingComplete={() => loadImg(datas.image)}
               className="w-full h-full object-contain"
             />
-            {/* product available progress */}
-            {/*{datas.campaingn_product && (*/}
-            {/*  <>*/}
-            {/*    <div className="px-[30px] absolute left-0 top-3 w-full">*/}
-            {/*      <div className="progress-title flex justify-between ">*/}
-            {/*        <p className="text-xs text-qblack font-400 leading-6">*/}
-            {/*          Prodcuts Available*/}
-            {/*        </p>*/}
-            {/*        <span className="text-sm text-qblack font-600 leading-6">*/}
-            {/*          {datas.cam_product_available}*/}
-            {/*        </span>*/}
-            {/*      </div>*/}
-            {/*      <div className="progress w-full h-[5px] rounded-[22px] bg-primarygray relative overflow-hidden">*/}
-            {/*        <div*/}
-            {/*          style={{*/}
-            {/*            width: `${*/}
-            {/*              datas.campaingn_product ? 100 - available : 0*/}
-            {/*            }%`,*/}
-            {/*          }}*/}
-            {/*          className="h-full absolute left-0 top-0 primary-bg"*/}
-            {/*        ></div>*/}
-            {/*      </div>*/}
-            {/*    </div>*/}
-            {/*  </>*/}
-            {/*)}*/}
-
-            {/* product type */}
-            {/*{datas.product_type && !datas.campaingn_product && (*/}
-            {/*  <div className="product-type absolute right-[14px] top-[17px]">*/}
-            {/*    <span*/}
-            {/*      className={`text-[9px] font-700 leading-none py-[6px] px-3 uppercase text-white rounded-full tracking-wider ${*/}
-            {/*        datas.product_type === "popular"*/}
-            {/*          ? "bg-[#19CC40]"*/}
-            {/*          : "primary-bg"*/}
-            {/*      }`}*/}
-            {/*    >*/}
-            {/*      {datas.product_type}*/}
-            {/*    </span>*/}
-            {/*  </div>*/}
-            {/*)}*/}
           </div>
         </div>
         <div className="product-card-details px-[30px] pb-[30px] relative pt-2">
@@ -319,7 +282,7 @@ export default function ProductCardStyleOne({ datas }) {
             <button
               onClick={() => addToCart(datas.id)}
               type="button"
-              className="yellow-btn group relative w-full h-full flex shadow  justify-center items-center overflow-hidden"
+              className="yellow-btn group  relative w-full h-full flex shadow  justify-center items-center overflow-hidden"
             >
               <div className="btn-content flex items-center space-x-3 rtl:space-x-reverse relative z-10">
                 <span>
@@ -411,7 +374,7 @@ export default function ProductCardStyleOne({ datas }) {
         {/* quick-access-btns */}
         <div className="quick-access-btns flex flex-col space-y-2">
           <button
-            className=" absolute group-hover:right-4 -right-10 top-20  transition-all ease-in-out"
+            className=" absolute group-hover:right-4 -right-10 top-10  transition-all ease-in-out"
             onClick={() => quickViewHandler(datas.slug)}
             type="button"
           >

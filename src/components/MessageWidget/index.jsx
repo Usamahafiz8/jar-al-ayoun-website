@@ -1,6 +1,5 @@
 import axios from "axios";
 import EmojiPicker from "emoji-picker-react";
-import Echo from "laravel-echo";
 import { useRouter } from "next/dist/client/router";
 import Image from "next/image";
 import React, { useContext, useEffect, useRef, useState } from "react";
@@ -283,24 +282,24 @@ function Index({ pusher }) {
   }, [toggleMessage, toggleMessage.newSeller]);
 
   //==watches
-  // const echo = Echo(options);
-  const echo = new Echo(options);
+  //   const echo = Echo(options);
 
-  const [listenerAdded, setListenerAdded] = useState(false);
-  useEffect(() => {
-    if (!listenerAdded) {
-      echo
-        .private(`seller-to-user-message.${auth() && auth().user.id}`)
-        .listen("SellerToUser", (e) => {
-          let activeSeller = localStorage.getItem("active-chat-seller");
-          newMessageHandler(e, activeSeller);
-        });
-      setListenerAdded(true);
-    }
-    return () => {
-      echo.leave("seller-to-user-message");
-    };
-  }, [echo, listenerAdded]);
+  //   const [listenerAdded, setListenerAdded] = useState(false);
+  //   useEffect(() => {
+  //     if (!listenerAdded) {
+  //       echo
+  //         .private(`seller-to-user-message.${auth() && auth().user.id}`)
+  //         .listen("SellerToUser", (e) => {
+  //           let activeSeller = localStorage.getItem("active-chat-seller");
+  //           newMessageHandler(e, activeSeller);
+  //         });
+  //       setListenerAdded(true);
+  //     }
+  //     return () => {
+  //       echo.leave("seller-to-user-message");
+  //     };
+  //   }, [echo, listenerAdded]);
+  //   Chat Box
   const messageToggleAction = () => {
     if (auth()) {
       setSeller(null);

@@ -7,15 +7,14 @@ import SectionStyleTwo from "../Helpers/SectionStyleTwo";
 import ViewMoreTitle from "../Helpers/ViewMoreTitle";
 import Layout from "../Partials/Layout";
 import Ads from "./Ads";
-import Banner from "./Banner";
 import BestSellers from "./BestSellers";
 import BrandSection from "./BrandSection";
 import CampaignCountDown from "./CampaignCountDown";
 // import ProductsAds from "./ProductsAds";
-import TwoColumnAds from "./ProductAds/TwoColumnAds";
+import CategorySection from "./CategorySection";
 import OneColumnAdsOne from "./ProductAds/OneColumnAdsOne";
 import OneColumnAdsTwo from "./ProductAds/OneColumnAdsTwo";
-import CategorySection from "./CategorySection";
+import TwoColumnAds from "./ProductAds/TwoColumnAds";
 
 export default function Home({ homepageData }) {
   const getsectionTitles = homepageData.section_title;
@@ -45,7 +44,7 @@ export default function Home({ homepageData }) {
     <>
       <Layout childrenClasses="pt-[30px] pb-[60px]">
         <Ads />
-        {homepage && (
+        {/* {homepage && (
           <Banner
             images={homepage.sliders}
             services={homepage.services}
@@ -53,13 +52,39 @@ export default function Home({ homepageData }) {
             sidebarImgTwo={homepage.sliderBannerTwo}
             className="banner-wrapper md:mb-[60px] mb-[30px]"
           />
-        )}
+        )} */}
         {homepage && (
           <CategorySection
             categories={homepage.homepage_categories}
             sectionTitle={sectionTitles && sectionTitles.Trending_Category}
           />
         )}
+        {homepage && (
+          <SectionStyleThree
+            products={
+              homepage.newArrivalProducts.length > 0
+                ? homepage.newArrivalProducts.slice(
+                    0,
+                    homepage.newArrivalProducts.length > 16
+                      ? 16
+                      : homepage.newArrivalProducts.length
+                  )
+                : []
+            }
+            sectionTitle={sectionTitles && sectionTitles.New_Arrivals}
+            seeMoreUrl={`/products?highlight=new_arrival`}
+            className="new-products md:mb-[60px] mb-[30px]"
+          />
+        )}
+
+        {homepage && (
+          <div className="w-full text-white md:mb-[60px] mb-[30px]">
+            <div className="container-x mx-auto">
+              <OneColumnAdsTwo data={homepage.singleBannerTwo} />
+            </div>
+          </div>
+        )}
+
         {homepage && (
           <SectionStyleOne
             products={homepage.popularCategoryProducts}
@@ -98,7 +123,8 @@ export default function Home({ homepageData }) {
           >
             <SectionStyleTwo
               products={
-                homepage.topRatedProducts.length&& homepage.topRatedProducts.length > 0
+                homepage.topRatedProducts.length &&
+                homepage.topRatedProducts.length > 0
                   ? homepage.topRatedProducts
                   : []
               }
@@ -147,7 +173,7 @@ export default function Home({ homepageData }) {
           />
         )}
         {homepage && <OneColumnAdsOne data={homepage.singleBannerOne} />}
-        {homepage && (
+        {/* {homepage && (
           <SectionStyleThree
             products={
               homepage.newArrivalProducts.length > 0
@@ -163,15 +189,15 @@ export default function Home({ homepageData }) {
             seeMoreUrl={`/products?highlight=new_arrival`}
             className="new-products md:mb-[60px] mb-[30px]"
           />
-        )}
+        )} */}
 
-        {homepage && (
+        {/* {homepage && (
           <div className="w-full text-white md:mb-[60px] mb-[30px]">
             <div className="container-x mx-auto">
               <OneColumnAdsTwo data={homepage.singleBannerTwo} />
             </div>
           </div>
-        )}
+        )} */}
         {homepage && (
           <SectionStyleFour
             products={

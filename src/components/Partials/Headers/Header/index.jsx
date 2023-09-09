@@ -64,5 +64,18 @@ export default function Header({ drawerAction, settings, contact }) {
       </div> */}
       <Navbar className="quomodo-shop-nav-bar lg:block hidden" />
     </header>
+    //    <header className="header-section-wrapper relative print:hidden">
+    //   <TopBar contact={contact && contact} className="quomodo-shop-top-bar" />
+    //   <Middlebar
+    //     settings={settings && settings}
+    //     className="quomodo-shop-middle-bar lg:block hidden"
+    //   />
+    //   <div className="quomodo-shop-drawer lg:hidden block w-full h-[60px] bg-white">
+    //     {/* ... */}
+    //   </div>
+    //   <div className="navbar-wrapper sticky top-0 z-50">
+    //     <Navbar className="quomodo-shop-nav-bar lg:block hidden" />
+    //   </div>
+    // </header>
   );
 }
