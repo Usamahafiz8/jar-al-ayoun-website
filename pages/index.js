@@ -1,16 +1,26 @@
+import { useEffect, useState } from "react";
 import PageHead from "../src/components/Helpers/PageHead";
+import Preloader from "../src/components/PreLoader/Preloader";
 import Home from "./../src/components/Home/index";
 
 export default function HomePage({ data }) {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate a loading delay (e.g., fetching data)
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
+
   const { seoSetting } = data;
   return (
     <>
-
       <PageHead
         title={`${seoSetting.seo_title}`}
         metaDes={seoSetting.seo_description}
       />
-      <Home homepageData={data} />
+      {isLoading ? <Preloader /> : <Home homepageData={data} />}
     </>
   );
 }

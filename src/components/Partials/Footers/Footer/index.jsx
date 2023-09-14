@@ -65,7 +65,7 @@ export default function Footer({ settings }) {
   return (
     <footer className="footer-section-wrapper bg-white print:hidden">
       <div className="w-full flex flex-col items-center ">
-        <div className="w-full bg-trasparent p-2  flex flex-row justify-between items-center ">
+        <div className="w-full bg-trasparent p-2  flex flex-row flex-wrap gap-2 justify-between items-center ">
           <span className="text-sm flex flex-row  items-center  gap-1 text-qblack font-600 cursor-pointer">
             <LockIcom className={"w-5 h-5"} /> We guarantee every transaction is
             100% secure.
@@ -94,7 +94,7 @@ export default function Footer({ settings }) {
           </span>
         </div>
       </div>
-      <div className="container-x block mx-auto pt-[30px]">
+      <div className=" container-x block mx-auto pt-[30px]">
         <div className="md:flex xl:flex pb-[30px]">
           <div className="md:w-2/6 xl:w-2/6 sm:w-1/2 w-full mb-10 md:mb-0">
             <div className="lg:w-[424px]  ml-0 w-full mb-10 lg:mb-0">
