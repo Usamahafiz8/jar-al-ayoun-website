@@ -1,6 +1,5 @@
-import React from "react";
-import settings from "../../../utils/settings";
 import { useEffect, useState } from "react";
+import settings from "../../../utils/settings";
 
 function Multivendor() {
   const { enable_multivendor } = settings();

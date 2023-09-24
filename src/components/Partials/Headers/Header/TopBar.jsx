@@ -2,7 +2,9 @@ import Link from "next/link";
 // import ThinPeople from "../../../Helpers/icons/ThinPeople";
 import { useEffect, useState } from "react";
 import ServeLangItem from "../../../Helpers/ServeLangItem";
+import Arrow from "../../../Helpers/icons/Arrow";
 import Multivendor from "../../../Shared/Multivendor";
+
 export default function TopBar({ className, contact }) {
   const [auth, setAuth] = useState(null);
   useEffect(() => {
@@ -19,25 +21,6 @@ export default function TopBar({ className, contact }) {
           <div className="flex justify-between items-center h-full">
             <div className="topbar-nav">
               <ul className="flex space-x-6">
-                {/* <li className={`rtl:ml-6 ltr:ml-0`}>
-                  {auth ? (
-                    <Link href="/profile#dashboard" passHref>
-                      <a rel="noopener noreferrer">
-                        <span className="text-xs leading-6 text-qblack font-500 cursor-pointer">
-                          {ServeLangItem()?.Account}
-                        </span>
-                      </a>
-                    </Link>
-                  ) : (
-                    <Link href="/login" passHref>
-                      <a rel="noopener noreferrer">
-                        <span className="text-xs leading-6 text-qblack font-500 cursor-pointer">
-                          {ServeLangItem()?.Account}
-                        </span>
-                      </a>
-                    </Link>
-                  )}
-                </li> */}
                 <li>
                   <Link href="/tracking-order" passHref>
                     <a rel="noopener noreferrer">
@@ -101,6 +84,28 @@ export default function TopBar({ className, contact }) {
                   <span className="text-xs text-primary font-500 leading-none rtl:ml-2 ltr:ml-0 ">
                     {contact && contact.phone}
                   </span>
+                </div>
+
+                <div>
+                  <button
+                    // onClick={handler}
+                    type="button"
+                    className="w-full h-full flex gap-2 justify-between items-center text-qwhite "
+                  >
+                    <div className="flex rtl:space-x-reverse  space-x-3 items-center ">
+                      <span className="text-sm font-600 text-qwhite ">
+                        {/* {ServeLangItem()?.All_Categories} */}
+                        Language
+                      </span>
+                    </div>
+                    <div>
+                      <Arrow
+                        width="5.78538"
+                        height="1.28564"
+                        className="fill-current text-qwhite"
+                      />
+                    </div>
+                  </button>
                 </div>
               </div>
             </div>
