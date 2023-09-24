@@ -60,6 +60,14 @@ export default function Home({ homepageData }) {
           />
         )}
         {homepage && (
+          <CampaignCountDown
+            className="md:mb-[60px] mb-[30px]"
+            flashSaleData={homepage.flashSale}
+            downloadData={homepage.flashSaleSidebarBanner}
+            lastDate={homepage.flashSale.end_time}
+          />
+        )}
+        {homepage && (
           <SectionStyleThree
             products={
               homepage.newArrivalProducts.length > 0
