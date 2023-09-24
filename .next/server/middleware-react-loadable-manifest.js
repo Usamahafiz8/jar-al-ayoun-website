@@ -1,1 +1,0 @@
-self.__REACT_LOADABLE_MANIFEST={"..\\src\\components\\Partials\\DefaultLayout.jsx -> react-facebook-pixel":{id:1767,files:["static/chunks/767.542b43ee7f29dda1.js"]}}
