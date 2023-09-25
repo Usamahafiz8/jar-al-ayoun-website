@@ -95,9 +95,9 @@ export default function Footer({ settings }) {
         </div>
       </div>
       <div className=" container-x block mx-auto pt-[30px]">
-        <div className="md:flex xl:flex pb-[30px]">
-          <div className="md:w-2/6 xl:w-2/6 sm:w-1/2 w-full mb-10 md:mb-0">
-            <div className="lg:w-[424px]  ml-0 w-full mb-10 lg:mb-0">
+        <div className="md:flex xl:flex sm:flex xs:flex pb-[30px]">
+          <div className="md:w-2/6 xl:w-2/6 sm:w-1/2  mb-10 md:mb-0">
+            <div className="lg:w-[424px]  ml-0  mb-10 lg:mb-0">
               <div className="flex flex-row items-center gap-8">
                 <Link href="/" passHref>
                   <a rel="noopener noreferrer">
@@ -133,7 +133,7 @@ export default function Footer({ settings }) {
               </p>
             </div>
           </div>
-          <div className="md:w-1/6 xl:w-1/6 sm:w-1/2 w-full mb-10 md:mb-0">
+          <div className="md:w-1/6 xl:w-1/6 sm:w-2/4	xs:w-2/4		mb-10 md:mb-0">
             {firstCol && (
               <>
                 <div className="mb-5">
@@ -160,7 +160,7 @@ export default function Footer({ settings }) {
               </>
             )}
           </div>
-          <div className="md:w-1/6 xl:w-1/6 sm:w-1/2 w-full mb-10 md:mb-0">
+          <div className="md:w-1/6 xl:w-1/6 sm:w-2/4	xs:w-2/4		mb-10 md:mb-0">
             {secondCol && (
               <>
                 <div className="mb-5">
@@ -187,7 +187,7 @@ export default function Footer({ settings }) {
               </>
             )}
           </div>
-          <div className="md:w-1/6 xl:w-1/6 sm:w-1/2 w-full mb-10 md:mb-0">
+          <div className="md:w-1/6 xl:w-1/6 sm:w-2/4	xs:w-2/4		mb-10 md:mb-0">
             {thirdCol && (
               <>
                 <div className="mb-5">
@@ -214,7 +214,7 @@ export default function Footer({ settings }) {
               </>
             )}
           </div>
-          <div className="md:w-1/6 xl:w-1/6 sm:w-1/2 w-full mb-10 md:mb-0">
+          <div className="md:w-1/6 xl:w-1/6 sm:w-2/4	xs:w-2/4		mb-10 md:mb-0">
             {thirdCol && (
               <>
                 <div className="mb-5">
@@ -241,7 +241,7 @@ export default function Footer({ settings }) {
               </>
             )}
           </div>
-          <div className="md:w-2/6 xl:w-2/6 sm:w-1/2 w-full mb-10 md:mb-0">
+          <div className="md:w-2/6 xl:w-2/6 sm:w-1/3	mb-10 md:mb-0">
             <div className="flex flex-col items-center ">
               <span className="text-xl text-qblack font-700 ">Instagram</span>
               <span className="text-sm text-qblack font-400">
@@ -252,8 +252,9 @@ export default function Footer({ settings }) {
         </div>
 
         <div className="w-full h-[1px] bg-primary"></div>
+
         <div
-          className="bottom-bar border-t border-qgray-border lg:h-[82px] flex lg:flex-row flex-col-reverse
+          className="bottom-bar  pt-4 lg:h-[82px] flex lg:flex-row flex-col-reverse
          justify-between items-center"
         >
           <div className="flex rtl:space-x-reverse lg:space-x-5 space-x-2.5 justify-between items-center mb-3">
