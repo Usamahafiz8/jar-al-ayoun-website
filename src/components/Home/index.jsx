@@ -1,3 +1,21 @@
+// import { useEffect, useState } from "react";
+// import settings from "../../../utils/settings";
+// import SectionStyleFour from "../Helpers/SectionStyleFour";
+// import SectionStyleOne from "../Helpers/SectionStyleOne";
+// import SectionStyleThree from "../Helpers/SectionStyleThree";
+// import SectionStyleTwo from "../Helpers/SectionStyleTwo";
+// import ViewMoreTitle from "../Helpers/ViewMoreTitle";
+// import Layout from "../Partials/Layout";
+// import Ads from "./Ads";
+// import BestSellers from "./BestSellers";
+// import BrandSection from "./BrandSection";
+// import CampaignCountDown from "./CampaignCountDown";
+// // import ProductsAds from "./ProductsAds";
+// import CategorySection from "./CategorySection";
+// import OneColumnAdsOne from "./ProductAds/OneColumnAdsOne";
+// import OneColumnAdsTwo from "./ProductAds/OneColumnAdsTwo";
+// import TwoColumnAds from "./ProductAds/TwoColumnAds";
+
 import { useEffect, useState } from "react";
 import settings from "../../../utils/settings";
 import SectionStyleFour from "../Helpers/SectionStyleFour";
@@ -46,27 +64,21 @@ export default function Home({ homepageData }) {
         <Ads />
         {/* {homepage && (
           <Banner
-            images={homepage.sliders}
+          images={homepage.sliders}
             services={homepage.services}
             sidebarImgOne={homepage.sliderBannerOne}
             sidebarImgTwo={homepage.sliderBannerTwo}
             className="banner-wrapper md:mb-[60px] mb-[30px]"
-          />
-        )} */}
+            />
+          )} */}
         {homepage && (
           <CategorySection
             categories={homepage.homepage_categories}
             sectionTitle={sectionTitles && sectionTitles.Trending_Category}
           />
         )}
-        {homepage && (
-          <CampaignCountDown
-            className="md:mb-[60px] mb-[30px]"
-            flashSaleData={homepage.flashSale}
-            downloadData={homepage.flashSaleSidebarBanner}
-            lastDate={homepage.flashSale.end_time}
-          />
-        )}
+        {homepage && <OneColumnAdsOne data={homepage.singleBannerOne} />}
+
         {homepage && (
           <SectionStyleThree
             products={
@@ -180,7 +192,6 @@ export default function Home({ homepageData }) {
             className="category-products md:mb-[60px] mb-[30px]"
           />
         )}
-        {homepage && <OneColumnAdsOne data={homepage.singleBannerOne} />}
         {/* {homepage && (
           <SectionStyleThree
             products={

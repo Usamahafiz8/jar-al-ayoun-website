@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import apiRequest from "../../../utils/apiRequest";
-import DiscountBanner from "../DiscountBanner";
+// import DiscountBanner from "../DiscountBanner";
 import Drawer from "../Mobile/Drawer";
 import Footer from "./Footers/Footer";
 import Header from "./Headers/Header";
@@ -63,7 +63,7 @@ export default function Layout({ children, childrenClasses }) {
         >
           {children && children}
         </div>
-        {subscribeData && <DiscountBanner datas={subscribeData} />}
+        {/* {subscribeData && <DiscountBanner datas={subscribeData} />} */}
 
         <Footer settings={settings} />
       </div>

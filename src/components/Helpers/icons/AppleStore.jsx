@@ -1,6 +1,6 @@
 import React from "react";
 
-function AppleStore(props) {
+function AppleStore({ className }) {
   return (
     <>
       <svg
@@ -8,6 +8,7 @@ function AppleStore(props) {
         height="36"
         viewBox="0 0 132 36"
         fill="none"
+        className={className}
         xmlns="http://www.w3.org/2000/svg"
       >
         <path

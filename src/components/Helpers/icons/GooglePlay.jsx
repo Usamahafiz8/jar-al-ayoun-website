@@ -1,6 +1,6 @@
 import React from "react";
 
-function GooglePlay() {
+function GooglePlay({ className }) {
   return (
     <>
       <svg
@@ -8,6 +8,7 @@ function GooglePlay() {
         height="39"
         viewBox="0 0 149 39"
         fill="none"
+        className={className}
         xmlns="http://www.w3.org/2000/svg"
       >
         <path

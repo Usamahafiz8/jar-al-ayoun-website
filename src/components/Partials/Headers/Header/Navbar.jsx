@@ -1,11 +1,11 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import Tryon from "../../../3dtryon";
 import ServeLangItem from "../../../Helpers/ServeLangItem";
 import Arrow from "../../../Helpers/icons/Arrow";
 import Fire from "../../../Helpers/icons/Fire";
 import FontAwesomeCom from "../../../Helpers/icons/FontAwesomeCom";
-import Multivendor from "../../../Shared/Multivendor";
 export default function Navbar({ className }) {
   const { websiteSetup } = useSelector((state) => state.websiteSetup);
   const categoryList = websiteSetup && websiteSetup.payload.productCategories;
@@ -31,7 +31,7 @@ export default function Navbar({ className }) {
       <div className="container-x mx-auto h-full">
         <div className="w-full h-full relative">
           <div className="w-full h-full flex justify-between items-center">
-            <div className="category-and-nav flex xl:rtl:space-x-reverse space-x-7 rtl:space-x-reverse space-x-3 items-center">
+            <div className="category-and-nav flex xl:rtl:space-x-reverse  rtl:space-x-reverse space-x-3 items-center">
               <div className="category w-[270px] h-[35px] px-5 rounded-md mt-[6px] relative bg-primary text-white">
                 <button
                   onClick={handler}
@@ -441,57 +441,59 @@ export default function Navbar({ className }) {
                 </ul>
               </div>
             </div>
-            {Multivendor() === 1 && (
-              <Link href="/" passHref>
-                <a rel="noopener noreferrer">
-                  <span className="flex items-center text-sm font-600 cursor-pointer text-qblack ">
-                    {/* <span>{ServeLangItem()?.Sellers}</span> */}
-                    3D TRY ON
-                  </span>
-                </a>
-              </Link>
-              // <div className="become-seller-btn">
-              //   <Link href="/" passHref>
-              //     <a rel="noopener noreferrer">
-              //       <div className=" w-[161px] h-[40px] flex justify-center items-center cursor-pointer">
-              //         <div className="flex rtl:space-x-reverse space-x-2 items-center">
-              //           <span className="transform rtl:rotate-180 fill-current ">
-              //             <svg
-              //               width="6"
-              //               height="10"
-              //               viewBox="0 0 6 10"
-              //               fill="none"
-              //               xmlns="http://www.w3.org/2000/svg"
-              //               className="fill-current"
-              //             >
-              //               <rect
-              //                 x="1.08984"
-              //                 width="6.94106"
-              //                 height="1.54246"
-              //                 transform="rotate(45 1.08984 0)"
-              //               />
-              //               <rect
-              //                 x="6"
-              //                 y="4.9082"
-              //                 width="6.94106"
-              //                 height="1.54246"
-              //                 transform="rotate(135 6 4.9082)"
-              //               />
-              //             </svg>
-              //           </span>
-              //           <span className="text-sm font-600">
-              //             {/* {ServeLangItem()?.Become_seller} */}
-              //             3D TRY ON
-              //           </span>
-              //         </div>
-              //       </div>
-              //     </a>
-              //   </Link>
-              // </div>
-            )}
+            {/* {Multivendor() === 1 && ( */}
+            <Link href="/" passHref>
+              <a rel="noopener noreferrer">
+                <span className="flex items-center text-sm font-600 cursor-pointer text-qblack ">
+                  {/* <span>{ServeLangItem()?.Sellers}</span> */}
+                  <Tryon />
+                </span>
+              </a>
+            </Link>
+
+            {/* )} */}
           </div>
         </div>
       </div>
     </div>
   );
 }
+
+// <div className="become-seller-btn">
+//   <Link href="/" passHref>
+//     <a rel="noopener noreferrer">
+//       <div className=" w-[161px] h-[40px] flex justify-center items-center cursor-pointer">
+//         <div className="flex rtl:space-x-reverse space-x-2 items-center">
+//           <span className="transform rtl:rotate-180 fill-current ">
+//             <svg
+//               width="6"
+//               height="10"
+//               viewBox="0 0 6 10"
+//               fill="none"
+//               xmlns="http://www.w3.org/2000/svg"
+//               className="fill-current"
+//             >
+//               <rect
+//                 x="1.08984"
+//                 width="6.94106"
+//                 height="1.54246"
+//                 transform="rotate(45 1.08984 0)"
+//               />
+//               <rect
+//                 x="6"
+//                 y="4.9082"
+//                 width="6.94106"
+//                 height="1.54246"
+//                 transform="rotate(135 6 4.9082)"
+//               />
+//             </svg>
+//           </span>
+//           <span className="text-sm font-600">
+//             {/* {ServeLangItem()?.Become_seller} */}
+//             3D TRY ON
+//           </span>
+//         </div>
+//       </div>
+//     </a>
+//   </Link>
+// </div>

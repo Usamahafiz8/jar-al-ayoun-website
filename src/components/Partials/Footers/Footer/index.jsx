@@ -2,7 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import AppleStore from "../../../Helpers/icons/AppleStore";
 import FontAwesomeCom from "../../../Helpers/icons/FontAwesomeCom";
+import GooglePlay from "../../../Helpers/icons/GooglePlay";
 import LockIcom from "../../../Helpers/icons/LockIcon";
 import MailIcon from "../../../Helpers/icons/Mail";
 import PhoneIcon from "../../../Helpers/icons/Phone";
@@ -89,8 +91,10 @@ export default function Footer({ settings }) {
           ) : (
             ""
           )}
-          <span className="text-sm text-qblack font-600 cursor-pointer">
+          <span className="text-sm text-qblack font-600 cursor-pointer flex flex-row justify-center items-center gap-4">
             Also Available On:
+            <GooglePlay className={"w-24"} />
+            <AppleStore className={"w-24"} />
           </span>
         </div>
       </div>
