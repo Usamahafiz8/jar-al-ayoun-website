@@ -35,10 +35,11 @@ function OneColumnAdsTwo({ data }) {
               <a rel="noopener noreferrer">
                 <div className="cursor-pointer w-full relative">
                   <div className="inline-flex text-qred rtl:space-x-reverse  space-x-1.5 items-center relative z-20">
-                    <span className="text-sm  font-semibold leading-[30px]">
+                    <span className="text-sm font-semibold leading-[30px] group-hover:text-white">
                       {ServeLangItem()?.Shop_Now}
                     </span>
-                    <span className="leading-[30px]">
+
+                    <span className="leading-[30px] group-hover:text-white">
                       <svg
                         width="7"
                         height="11"
@@ -64,7 +65,7 @@ function OneColumnAdsTwo({ data }) {
                       </svg>
                     </span>
                   </div>
-                  <div className="w-[82px] transition-all duration-300 ease-in-out group-hover:h-4 h-[0px] primary-bg absolute left-0 rtl:right-0 bottom-0 z-10"></div>
+                  <div className="w-[82px] transition-all duration-300 ease-in-out group-hover:h-8 h-[0px] primary-bg text-white absolute left-0 rtl:right-0 bottom-0 z-10"></div>
                 </div>
               </a>
             </Link>

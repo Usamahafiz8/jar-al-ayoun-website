@@ -47,9 +47,9 @@ export default function Middlebar({ className, settings }) {
   }, [cart]);
 
   return (
-    <div className={`w-full h-full p-2	 bg-white ${className}`}>
+    <div className={`w-full h-full p-1	 bg-white ${className}`}>
       <div className="lg:block hidden">
-        <div className="container-x mx-auto h-full">
+        <div className="container-x mx-auto h-full nav-middle-bar">
           <div className=" pl-4 pr-2relative h-full">
             <div className="flex justify-between items-center h-full">
               <div className="flex flex-row justify-between items-center gap-4 w-200  ">

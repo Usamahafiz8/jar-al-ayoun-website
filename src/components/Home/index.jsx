@@ -30,6 +30,8 @@ import BrandSection from "./BrandSection";
 import CampaignCountDown from "./CampaignCountDown";
 // import ProductsAds from "./ProductsAds";
 import CategorySection from "./CategorySection";
+import FourButtonRow from "./FourButtonRow";
+import GetAppointmentForm from "./GetAppointmentForm";
 import OneColumnAdsOne from "./ProductAds/OneColumnAdsOne";
 import OneColumnAdsTwo from "./ProductAds/OneColumnAdsTwo";
 import TwoColumnAds from "./ProductAds/TwoColumnAds";
@@ -326,6 +328,20 @@ export default function Home({ homepageData }) {
             downloadData={homepage.flashSaleSidebarBanner}
             lastDate={homepage.flashSale.end_time}
           />
+        )}
+        {homepage && (
+          <div className="w-full text-black">
+            <div className="container-x mx-auto">
+              <GetAppointmentForm />{" "}
+            </div>
+          </div>
+        )}
+        {homepage && (
+          <div className="w-full text-black">
+            <div className="container-x mx-auto">
+              <FourButtonRow />
+            </div>
+          </div>
         )}
       </Layout>
     </>

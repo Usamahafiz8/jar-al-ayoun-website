@@ -55,11 +55,13 @@ export default function Layout({ children, childrenClasses }) {
           contact={contact && contact}
           settings={settings}
           drawerAction={() => setDrawer(!drawer)}
+          style={{ paddingBottom: "20px" }}
         />
         <div
           className={`w-full min-h-screen  ${
             childrenClasses || "pt-[30px] pb-[60px]"
           }`}
+          style={{ marginTop: "170px" }}
         >
           {children && children}
         </div>

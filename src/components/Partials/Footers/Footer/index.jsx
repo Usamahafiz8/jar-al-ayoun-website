@@ -67,7 +67,7 @@ export default function Footer({ settings }) {
   return (
     <footer className="footer-section-wrapper bg-white print:hidden">
       <div className="w-full flex flex-col items-center ">
-        <div className="w-full bg-trasparent p-2  flex flex-row flex-wrap gap-2 justify-between items-center ">
+        <div className="w-full bg-trasparent flex flex-row flex-wrap gap-2 justify-around items-center">
           <span className="text-sm flex flex-row  items-center  gap-1 text-qblack font-600 cursor-pointer">
             <LockIcom className={"w-5 h-5"} /> We guarantee every transaction is
             100% secure.
@@ -99,45 +99,45 @@ export default function Footer({ settings }) {
         </div>
       </div>
       <div className=" container-x block mx-auto pt-[30px]">
-        <div className="md:flex xl:flex sm:flex xs:flex pb-[30px]">
-          <div className="md:w-2/6 xl:w-2/6 sm:w-1/2  mb-10 md:mb-0">
-            <div className="lg:w-[424px]  ml-0  mb-10 lg:mb-0">
-              <div className="flex flex-row items-center gap-8">
-                <Link href="/" passHref>
-                  <a rel="noopener noreferrer">
-                    <Image
-                      src="/assets/images/logo.png" // Use the correct path to your PNG image
-                      alt="Jar al ayoun"
-                      width={60}
-                      height={90}
-                    />
-                  </a>
-                </Link>
-                <div className="flex flex-col items-center ">
-                  <span className="text-xl text-qblack font-700 cursor-pointer">
-                    JAR Al Ayoun
-                  </span>
-                  <span className="text-sm text-qblack font-400">
-                    OPTICAL STORE
-                  </span>
-                </div>
-              </div>
-              <p className="text-[#9A9A9A] text-[15px] w-[247px] leading-[28px]">
-                some sample text write here about jar store
-              </p>
-              <br />
-              <p className="text-qblack flex flex-row  items-center  gap-1 text-[15px] w-[247px] leading-[28px]">
-                <Location className={"w-5 h-5"} /> jar al ayoun head office
-              </p>
-              <p className="text-qblack flex flex-row items-center  gap-1 text-[15px] w-[247px] leading-[28px]">
-                <PhoneIcon className={"w-5 h-5"} /> +966 51 00000
-              </p>
-              <p className="text-qblack text-[15px] flex items-center  gap-1 flex-row w-[247px] leading-[28px]">
-                <MailIcon className={'"w-5 h-5'} /> info@jaralayoun
-              </p>
+        <div className="md:flex xl:flex sm:flex xs:flex pb-[30px] pr-[30px] pl-[30px]">
+          <div className="md:w-2/6 xl:w-2/6 sm:w-1/2 mb-10 md:mb-0 flex items-center gap-8">
+            <Link href="/" passHref>
+              <a rel="noopener noreferrer">
+                <Image
+                  src="/assets/images/logo.png"
+                  alt="Jar al ayoun"
+                  width={60}
+                  height={90}
+                />
+              </a>
+            </Link>
+            <div className="flex flex-col items-center">
+              <span className="text-xl text-qblack font-700 cursor-pointer">
+                JAR Al Ayoun
+              </span>
+              <span className="text-sm text-qblack font-400">
+                OPTICAL STORE
+              </span>
             </div>
           </div>
-          <div className="md:w-1/6 xl:w-1/6 sm:w-2/4	xs:w-2/4		mb-10 md:mb-0">
+          <div className="lg:w-[424px] ml-0 mb-10 lg:mb-0">
+            <p className="text-[#9A9A9A] text-[15px] w-[247px] leading-[28px]">
+              some sample text write here about jar store
+            </p>
+            <br />
+            <p className="text-qblack flex flex-row items-center gap-1 text-[15px] w-[247px] leading-[28px]">
+              <Location className="w-5 h-5" /> jar al ayoun head office
+            </p>
+            <p className="text-qblack flex flex-row items-center gap-1 text-[15px] w-[247px] leading-[28px]">
+              <PhoneIcon className="w-5 h-5" /> +966 51 00000
+            </p>
+            <p className="text-qblack text-[15px] flex items-center gap-1 flex-row w-[247px] leading-[28px]">
+              <MailIcon className="w-5 h-5" /> info@jaralayoun
+            </p>
+          </div>
+          <div className="vertical-divider"></div>
+
+          <div className="md:w-1/6 xl:w-1/6 sm:w-2/4	xs:w-2/4		mb-10 md:mb-0 pl-12">
             {firstCol && (
               <>
                 <div className="mb-5">
@@ -164,7 +164,7 @@ export default function Footer({ settings }) {
               </>
             )}
           </div>
-          <div className="md:w-1/6 xl:w-1/6 sm:w-2/4	xs:w-2/4		mb-10 md:mb-0">
+          <div className="md:w-1/6 xl:w-1/6 sm:w-2/4	xs:w-2/4		mb-10 md:mb-0 pl-12">
             {secondCol && (
               <>
                 <div className="mb-5">
@@ -191,7 +191,7 @@ export default function Footer({ settings }) {
               </>
             )}
           </div>
-          <div className="md:w-1/6 xl:w-1/6 sm:w-2/4	xs:w-2/4		mb-10 md:mb-0">
+          <div className="md:w-1/6 xl:w-1/6 sm:w-2/4	xs:w-2/4 mb-10 md:mb-0 pl-12">
             {thirdCol && (
               <>
                 <div className="mb-5">
@@ -218,7 +218,7 @@ export default function Footer({ settings }) {
               </>
             )}
           </div>
-          <div className="md:w-1/6 xl:w-1/6 sm:w-2/4	xs:w-2/4		mb-10 md:mb-0">
+          <div className="md:w-1/6 xl:w-1/6 sm:w-2/4	xs:w-2/4		mb-10 md:mb-0 pl-12">
             {thirdCol && (
               <>
                 <div className="mb-5">
@@ -246,7 +246,7 @@ export default function Footer({ settings }) {
             )}
           </div>
           <div className="md:w-2/6 xl:w-2/6 sm:w-1/3	mb-10 md:mb-0">
-            <div className="flex flex-col items-center ">
+            <div className="flex flex-col items-end  ">
               <span className="text-xl text-qblack font-700 ">Instagram</span>
               <span className="text-sm text-qblack font-400">
                 Instagram API

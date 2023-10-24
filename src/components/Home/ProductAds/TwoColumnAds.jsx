@@ -1,5 +1,5 @@
-import React from "react";
 import Link from "next/link";
+import React from "react";
 import ShopNowBtn from "../../Helpers/Buttons/ShopNowBtn";
 import ServeLangItem from "../../Helpers/ServeLangItem";
 
@@ -126,7 +126,7 @@ function TwoColumnAds({ bannerOne, bannerTwo }) {
                               </svg>
                             </span>
                           </div>
-                          <div className="w-[82px] transition-all duration-300 ease-in-out group-hover:h-4 h-[0px] primary-bg absolute left-0 bottom-0 z-10"></div>
+                          <div className="w-[82px] transition-all duration-300 ease-in-out group-hover:h-8 h-[0px] primary-bg absolute left-0 bottom-0 z-10"></div>
                         </div>
                       </a>
                     </Link>

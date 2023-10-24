@@ -14,7 +14,7 @@ export default function Header({ drawerAction, settings, contact }) {
   return (
     <header className="header-section-wrapper relative print:hidden">
       {/* Show the desktop header for screens larger than 768px */}
-      <div className="lg:block hidden ">
+      <div className="lg:block hidden fixed top-0 w-full z-50 ">
         <TopBar contact={contact && contact} className="quomodo-shop-top-bar" />
         <Middlebar
           settings={settings && settings}
