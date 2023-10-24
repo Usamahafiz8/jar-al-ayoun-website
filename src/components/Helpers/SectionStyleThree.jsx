@@ -3,6 +3,7 @@ import DataIteration from "./DataIteration";
 import ViewMoreTitle from "./ViewMoreTitle";
 
 export default function SectionStyleThree({
+  homepage,
   className,
   sectionTitle,
   seeMoreUrl,
@@ -29,7 +30,7 @@ export default function SectionStyleThree({
             <DataIteration datas={rs} startLength={0} endLength={4}>
               {({ datas }) => (
                 <div data-aos="fade-up" key={datas.id} className="item">
-                  <ProductCardStyleOne datas={datas} />
+                  <ProductCardStyleOne datas={datas} homepage={homepage} />
                 </div>
               )}
             </DataIteration>

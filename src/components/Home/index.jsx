@@ -62,15 +62,6 @@ export default function Home({ homepageData }) {
     <>
       <Layout childrenClasses="pt-[30px] pb-[60px]">
         <Ads />
-        {/* {homepage && (
-          <Banner
-          images={homepage.sliders}
-            services={homepage.services}
-            sidebarImgOne={homepage.sliderBannerOne}
-            sidebarImgTwo={homepage.sliderBannerTwo}
-            className="banner-wrapper md:mb-[60px] mb-[30px]"
-            />
-          )} */}
         {homepage && (
           <CategorySection
             categories={homepage.homepage_categories}
@@ -78,9 +69,69 @@ export default function Home({ homepageData }) {
           />
         )}
         {homepage && <OneColumnAdsOne data={homepage.singleBannerOne} />}
-
+        {homepage && <OneColumnAdsOne data={homepage.singleBannerOne} />}
+        {homepage && <OneColumnAdsOne data={homepage.singleBannerOne} />}
+        {homepage && (
+          <div className="w-full text-white">
+            <div className="container-x mx-auto">
+              <OneColumnAdsTwo data={homepage.singleBannerTwo} />
+            </div>
+          </div>
+        )}{" "}
+        {homepage && (
+          <div className="w-full text-white">
+            <div className="container-x mx-auto">
+              <OneColumnAdsTwo data={homepage.singleBannerTwo} />
+            </div>
+          </div>
+        )}{" "}
+        {homepage && (
+          <div className="w-full text-white">
+            <div className="container-x mx-auto">
+              <OneColumnAdsTwo data={homepage.singleBannerTwo} />
+            </div>
+          </div>
+        )}{" "}
+        {homepage && (
+          <TwoColumnAds
+            bannerOne={homepage.twoColumnBannerOne}
+            bannerTwo={homepage.twoColumnBannerTwo}
+          />
+        )}{" "}
+        {homepage && (
+          <TwoColumnAds
+            bannerOne={homepage.twoColumnBannerOne}
+            bannerTwo={homepage.twoColumnBannerTwo}
+          />
+        )}
+        {/* Add Section */}
+        {homepage && <OneColumnAdsOne data={homepage.singleBannerOne} />}
+        {homepage && (
+          <TwoColumnAds
+            bannerOne={homepage.twoColumnBannerOne}
+            bannerTwo={homepage.twoColumnBannerTwo}
+          />
+        )}
+        {homepage && (
+          <div className="w-full text-white">
+            <div className="container-x mx-auto">
+              <OneColumnAdsTwo data={homepage.singleBannerTwo} />
+            </div>
+          </div>
+        )}
+        {homepage && <OneColumnAdsOne data={homepage.singleBannerOne} />}
+        {homepage && (
+          <CampaignCountDown
+            className="md:mb-[60px] mb-[30px]"
+            flashSaleData={homepage.flashSale}
+            downloadData={homepage.flashSaleSidebarBanner}
+            lastDate={homepage.flashSale.end_time}
+          />
+        )}
+        {/* Add Section Ended */}
         {homepage && (
           <SectionStyleThree
+            homepage={homepage}
             products={
               homepage.newArrivalProducts.length > 0
                 ? homepage.newArrivalProducts.slice(
@@ -96,15 +147,31 @@ export default function Home({ homepageData }) {
             className="new-products md:mb-[60px] mb-[30px]"
           />
         )}
-
+        {/* Add Section */}
+        {homepage && <OneColumnAdsOne data={homepage.singleBannerOne} />}
         {homepage && (
-          <div className="w-full text-white md:mb-[60px] mb-[30px]">
+          <TwoColumnAds
+            bannerOne={homepage.twoColumnBannerOne}
+            bannerTwo={homepage.twoColumnBannerTwo}
+          />
+        )}
+        {homepage && (
+          <div className="w-full text-white">
             <div className="container-x mx-auto">
               <OneColumnAdsTwo data={homepage.singleBannerTwo} />
             </div>
           </div>
         )}
-
+        {homepage && <OneColumnAdsOne data={homepage.singleBannerOne} />}
+        {homepage && (
+          <CampaignCountDown
+            className="md:mb-[60px] mb-[30px]"
+            flashSaleData={homepage.flashSale}
+            downloadData={homepage.flashSaleSidebarBanner}
+            lastDate={homepage.flashSale.end_time}
+          />
+        )}
+        {/* Add Section Ended */}
         {homepage && (
           <SectionStyleOne
             products={homepage.popularCategoryProducts}
@@ -126,7 +193,22 @@ export default function Home({ homepageData }) {
             className="brand-section-wrapper md:mb-[60px] mb-[30px]"
           />
         )}
-
+        {/* Add Section */}
+        {homepage && <OneColumnAdsOne data={homepage.singleBannerOne} />}
+        {homepage && (
+          <TwoColumnAds
+            bannerOne={homepage.twoColumnBannerOne}
+            bannerTwo={homepage.twoColumnBannerTwo}
+          />
+        )}
+        {homepage && (
+          <div className="w-full text-white">
+            <div className="container-x mx-auto">
+              <OneColumnAdsTwo data={homepage.singleBannerTwo} />
+            </div>
+          </div>
+        )}
+        {homepage && <OneColumnAdsOne data={homepage.singleBannerOne} />}
         {homepage && (
           <CampaignCountDown
             className="md:mb-[60px] mb-[30px]"
@@ -135,6 +217,7 @@ export default function Home({ homepageData }) {
             lastDate={homepage.flashSale.end_time}
           />
         )}
+        {/* Add Section Ended */}
         {homepage && (
           <ViewMoreTitle
             className="top-selling-product md:mb-[60px] mb-[30px]"
@@ -151,7 +234,6 @@ export default function Home({ homepageData }) {
             />
           </ViewMoreTitle>
         )}
-
         {homepage && isMultivendor === 1 && (
           <ViewMoreTitle
             className="best-sallers-section md:mb-[60px] mb-[30px]"
@@ -163,13 +245,31 @@ export default function Home({ homepageData }) {
             />
           </ViewMoreTitle>
         )}
-
+        {/* Add Section */}
+        {homepage && <OneColumnAdsOne data={homepage.singleBannerOne} />}
         {homepage && (
           <TwoColumnAds
             bannerOne={homepage.twoColumnBannerOne}
             bannerTwo={homepage.twoColumnBannerTwo}
           />
         )}
+        {homepage && (
+          <div className="w-full text-white">
+            <div className="container-x mx-auto">
+              <OneColumnAdsTwo data={homepage.singleBannerTwo} />
+            </div>
+          </div>
+        )}
+        {homepage && <OneColumnAdsOne data={homepage.singleBannerOne} />}
+        {homepage && (
+          <CampaignCountDown
+            className="md:mb-[60px] mb-[30px]"
+            flashSaleData={homepage.flashSale}
+            downloadData={homepage.flashSaleSidebarBanner}
+            lastDate={homepage.flashSale.end_time}
+          />
+        )}
+        {/* Add Section Ended */}
         {homepage && (
           <SectionStyleOne
             categories={
@@ -192,39 +292,39 @@ export default function Home({ homepageData }) {
             className="category-products md:mb-[60px] mb-[30px]"
           />
         )}
-        {/* {homepage && (
-          <SectionStyleThree
-            products={
-              homepage.newArrivalProducts.length > 0
-                ? homepage.newArrivalProducts.slice(
-                    0,
-                    homepage.newArrivalProducts.length > 16
-                      ? 16
-                      : homepage.newArrivalProducts.length
-                  )
-                : []
-            }
-            sectionTitle={sectionTitles && sectionTitles.New_Arrivals}
-            seeMoreUrl={`/products?highlight=new_arrival`}
-            className="new-products md:mb-[60px] mb-[30px]"
-          />
-        )} */}
-
-        {/* {homepage && (
-          <div className="w-full text-white md:mb-[60px] mb-[30px]">
-            <div className="container-x mx-auto">
-              <OneColumnAdsTwo data={homepage.singleBannerTwo} />
-            </div>
-          </div>
-        )} */}
         {homepage && (
           <SectionStyleFour
+            homepage={homepage}
             products={
               homepage.bestProducts.length > 0 ? homepage.bestProducts : []
             }
             sectionTitle={sectionTitles && sectionTitles.Best_Products}
             seeMoreUrl={`/products?highlight=best_product`}
             className="category-products md:mb-[60px] mb-[30px]"
+          />
+        )}
+        {/* Add Section */}
+        {homepage && <OneColumnAdsOne data={homepage.singleBannerOne} />}
+        {homepage && (
+          <TwoColumnAds
+            bannerOne={homepage.twoColumnBannerOne}
+            bannerTwo={homepage.twoColumnBannerTwo}
+          />
+        )}
+        {homepage && (
+          <div className="w-full text-white">
+            <div className="container-x mx-auto">
+              <OneColumnAdsTwo data={homepage.singleBannerTwo} />
+            </div>
+          </div>
+        )}
+        {homepage && <OneColumnAdsOne data={homepage.singleBannerOne} />}
+        {homepage && (
+          <CampaignCountDown
+            className="md:mb-[60px] mb-[30px]"
+            flashSaleData={homepage.flashSale}
+            downloadData={homepage.flashSaleSidebarBanner}
+            lastDate={homepage.flashSale.end_time}
           />
         )}
       </Layout>

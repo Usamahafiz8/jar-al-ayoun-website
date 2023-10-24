@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import settings from "../../../../utils/settings";
 import { useRouter } from "next/router";
-import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import auth from "../../../../utils/auth";
-import apiRequest from "../../../../utils/apiRequest";
+import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
+import apiRequest from "../../../../utils/apiRequest";
+import auth from "../../../../utils/auth";
+import settings from "../../../../utils/settings";
 import { fetchCart } from "../../../store/Cart";
 import CheckProductIsExistsInFlashSale from "../../Shared/CheckProductIsExistsInFlashSale";
 import ServeLangItem from "../ServeLangItem";
@@ -26,7 +26,7 @@ const Redirect = () => {
   );
 };
 
-export default function ProductCardRowStyleTwo({ className, datas }) {
+export default function ProductCardRowStyleTwo({ className, datas, homepage }) {
   const router = useRouter();
   const dispatch = useDispatch();
   //cart
@@ -173,43 +173,48 @@ export default function ProductCardRowStyleTwo({ className, datas }) {
                 </p>
               </a>
             </Link>
-
-            <p className="price">
-              <span
-                suppressHydrationWarning
-                className={`main-price  font-600 text-[18px] ${
-                  offerPrice ? "line-through text-qgray" : "text-qred"
-                }`}
-              >
-                {offerPrice ? (
-                  <span>{currency_icon && currency_icon + price}</span>
-                ) : (
-                  <>
-                    {isProductInFlashSale && (
-                      <span className="line-through text-qgray font-500 text-base mr-2">
-                        {currency_icon &&
-                          currency_icon + parseFloat(price).toFixed(2)}
-                      </span>
+            {homepage ? (
+              <></>
+            ) : (
+              <>
+                <p className="price">
+                  <span
+                    suppressHydrationWarning
+                    className={`main-price  font-600 text-[18px] ${
+                      offerPrice ? "line-through text-qgray" : "text-qred"
+                    }`}
+                  >
+                    {offerPrice ? (
+                      <span>{currency_icon && currency_icon + price}</span>
+                    ) : (
+                      <>
+                        {isProductInFlashSale && (
+                          <span className="line-through text-qgray font-500 text-base mr-2">
+                            {currency_icon &&
+                              currency_icon + parseFloat(price).toFixed(2)}
+                          </span>
+                        )}
+                        <CheckProductIsExistsInFlashSale
+                          id={datas.id}
+                          price={price}
+                        />
+                      </>
                     )}
-                    <CheckProductIsExistsInFlashSale
-                      id={datas.id}
-                      price={price}
-                    />
-                  </>
-                )}
-              </span>
-              {offerPrice && (
-                <span
-                  suppressHydrationWarning
-                  className="offer-price text-qred font-600 text-[18px] ml-2"
-                >
-                  <CheckProductIsExistsInFlashSale
-                    id={datas.id}
-                    price={offerPrice}
-                  />
-                </span>
-              )}
-            </p>
+                  </span>
+                  {offerPrice && (
+                    <span
+                      suppressHydrationWarning
+                      className="offer-price text-qred font-600 text-[18px] ml-2"
+                    >
+                      <CheckProductIsExistsInFlashSale
+                        id={datas.id}
+                        price={offerPrice}
+                      />
+                    </span>
+                  )}
+                </p>
+              </>
+            )}
           </div>
         </div>
       </div>

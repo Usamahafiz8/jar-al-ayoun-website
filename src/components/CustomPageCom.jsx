@@ -1,8 +1,8 @@
+import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { useRouter } from "next/router";
-import Layout from "./Partials/Layout";
 import PageTitle from "./Helpers/PageTitle";
+import Layout from "./Partials/Layout";
 // import languageModel from "../../utils/languageModel";
 import PageHead from "./Helpers/PageHead";
 import ServeLangItem from "./Helpers/ServeLangItem";
@@ -35,6 +35,7 @@ function CustomPageCom({ slug }) {
           <div className="w-full mb-[30px]">
             {pageData && (
               <PageTitle
+                dsgds
                 breadcrumb={[
                   { name: ServeLangItem()?.home, path: "/" },
                   {

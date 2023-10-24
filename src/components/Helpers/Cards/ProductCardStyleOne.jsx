@@ -35,7 +35,7 @@ const Redirect = () => {
   );
 };
 
-export default function ProductCardStyleOne({ datas }) {
+export default function ProductCardStyleOne({ datas, homepage }) {
   const router = useRouter();
   const dispatch = useDispatch();
   const { wishlistData } = useSelector((state) => state.wishlistData);
@@ -321,7 +321,6 @@ export default function ProductCardStyleOne({ datas }) {
               </>
             )}
           </div>
-
           <Link
             href={{ pathname: "/single-product", query: { slug: datas.slug } }}
             passHref
@@ -332,44 +331,50 @@ export default function ProductCardStyleOne({ datas }) {
               </p>
             </a>
           </Link>
-          <p className="price">
-            <span
-              suppressHydrationWarning
-              className={`main-price  font-600 text-[18px] ${
-                offerPrice ? "line-through text-qgray" : "text-qred"
-              }`}
-            >
-              {offerPrice ? (
-                <span>{currency_icon && currency_icon + price}</span>
-              ) : (
-                <>
-                  {isProductInFlashSale && (
-                    <span
-                      className={`line-through text-qgray font-500 text-[16px] mr-2`}
-                    >
-                      {currency_icon &&
-                        currency_icon + parseFloat(price).toFixed(2)}
-                    </span>
+          {homepage ? (
+            <>
+              <p className="price">
+                <span
+                  suppressHydrationWarning
+                  className={`main-price  font-600 text-[18px] ${
+                    offerPrice ? "line-through text-qgray" : "text-qred"
+                  }`}
+                >
+                  {offerPrice ? (
+                    <span>{currency_icon && currency_icon + price}</span>
+                  ) : (
+                    <>
+                      {isProductInFlashSale && (
+                        <span
+                          className={`line-through text-qgray font-500 text-[16px] mr-2`}
+                        >
+                          {currency_icon &&
+                            currency_icon + parseFloat(price).toFixed(2)}
+                        </span>
+                      )}
+                      <CheckProductIsExistsInFlashSale
+                        id={datas.id}
+                        price={price}
+                      />
+                    </>
                   )}
-                  <CheckProductIsExistsInFlashSale
-                    id={datas.id}
-                    price={price}
-                  />
-                </>
-              )}
-            </span>
-            {offerPrice && (
-              <span
-                suppressHydrationWarning
-                className="offer-price text-qred font-600 text-[18px] ml-2"
-              >
-                <CheckProductIsExistsInFlashSale
-                  id={datas.id}
-                  price={offerPrice}
-                />
-              </span>
-            )}
-          </p>
+                </span>
+                {offerPrice && (
+                  <span
+                    suppressHydrationWarning
+                    className="offer-price text-qred font-600 text-[18px] ml-2"
+                  >
+                    <CheckProductIsExistsInFlashSale
+                      id={datas.id}
+                      price={offerPrice}
+                    />
+                  </span>
+                )}
+              </p>
+            </>
+          ) : (
+            <></>
+          )}
         </div>
         {/* quick-access-btns */}
         <div className="quick-access-btns flex flex-col space-y-2">

@@ -50,7 +50,7 @@ export default function Middlebar({ className, settings }) {
     <div className={`w-full h-full p-2	 bg-white ${className}`}>
       <div className="lg:block hidden">
         <div className="container-x mx-auto h-full">
-          <div className="relative h-full">
+          <div className=" pl-4 pr-2relative h-full">
             <div className="flex justify-between items-center h-full">
               <div className="flex flex-row justify-between items-center gap-4 w-200  ">
                 <Link href="/" passHref>
@@ -70,8 +70,8 @@ export default function Middlebar({ className, settings }) {
                       <Image
                         src="/assets/images/logo.png" // Use the correct path to your PNG image
                         alt="Jar al ayoun"
-                        width={60}
-                        height={90}
+                        width={35}
+                        height={60}
                       />
                       <div className="flex flex-col items-center p-4  ">
                         <span className="text-xl  text-qblack font-800 cursor-pointer">

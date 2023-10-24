@@ -3,6 +3,7 @@ import DataIteration from "./DataIteration";
 import ViewMoreTitle from "./ViewMoreTitle";
 
 export default function SectionStyleFour({
+  homepage,
   className,
   sectionTitle,
   seeMoreUrl,
@@ -29,21 +30,33 @@ export default function SectionStyleFour({
             <div className="item-col">
               <DataIteration datas={rs} startLength={0} endLength={4}>
                 {({ datas }) => (
-                  <ProductCardRowStyleTwo key={datas.id} datas={datas} />
+                  <ProductCardRowStyleTwo
+                    key={datas.id}
+                    datas={datas}
+                    homepage={homepage}
+                  />
                 )}
               </DataIteration>
             </div>
             <div className="item-col">
               <DataIteration datas={rs} startLength={4} endLength={8}>
                 {({ datas }) => (
-                  <ProductCardRowStyleTwo key={datas.id} datas={datas} />
+                  <ProductCardRowStyleTwo
+                    key={datas.id}
+                    datas={datas}
+                    homepage={homepage}
+                  />
                 )}
               </DataIteration>
             </div>
             <div className="item-col">
               <DataIteration datas={rs} startLength={8} endLength={12}>
                 {({ datas }) => (
-                  <ProductCardRowStyleTwo key={datas.id} datas={datas} />
+                  <ProductCardRowStyleTwo
+                    key={datas.id}
+                    datas={datas}
+                    homepage={homepage}
+                  />
                 )}
               </DataIteration>
             </div>
