@@ -3,15 +3,15 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
+import ProductCardRowStyleTwo from "../Helpers/Cards/ProductCardRowStyleTwo";
 import ProductCardStyleOne from "../Helpers/Cards/ProductCardStyleOne";
 import DataIteration from "../Helpers/DataIteration";
-import Star from "../Helpers/icons/Star";
-import Layout from "../Partials/Layout";
-import ProductsFilter from "./ProductsFilter";
-import OneColumnAdsTwo from "../Home/ProductAds/OneColumnAdsTwo";
-import ProductCardRowStyleTwo from "../Helpers/Cards/ProductCardRowStyleTwo";
 import LoaderStyleOne from "../Helpers/Loaders/LoaderStyleOne";
 import ServeLangItem from "../Helpers/ServeLangItem";
+import Star from "../Helpers/icons/Star";
+import OneColumnAdsTwo from "../Home/ProductAds/OneColumnAdsTwo";
+import Layout from "../Partials/Layout";
+import ProductsFilter from "./ProductsFilter";
 
 export default function AllProductPage({ response, sellerInfo }) {
   const [resProducts, setProducts] = useState(null);
@@ -175,17 +175,19 @@ export default function AllProductPage({ response, sellerInfo }) {
           };
         })
     );
-    const min = response.data &&
-        response.data.products.data &&
-        Math.min(
-            ...response.data.products.data.map((item) => parseInt(item.price))
-        );
-    const max =  response.data &&
-        response.data.products.data &&
-        Math.max(
-            ...response.data.products.data.map((item) => parseInt(item.price))
-        );
-    const volumeArr = [min,max];
+    const min =
+      response.data &&
+      response.data.products.data &&
+      Math.min(
+        ...response.data.products.data.map((item) => parseInt(item.price))
+      );
+    const max =
+      response.data &&
+      response.data.products.data &&
+      Math.max(
+        ...response.data.products.data.map((item) => parseInt(item.price))
+      );
+    const volumeArr = [min, max];
     setVolume(volumeArr);
   }, [response.data]);
   useEffect(() => {
@@ -479,7 +481,7 @@ export default function AllProductPage({ response, sellerInfo }) {
 
             {/*<BreadcrumbCom />*/}
             <div className="w-full lg:flex lg:space-x-[30px] rtl:space-x-reverse">
-              <div className="lg:w-[270px]">
+              <div className="lg:w-[400px]">
                 <ProductsFilter
                   filterToggle={filterToggle}
                   filterToggleHandler={() => setToggle(!filterToggle)}

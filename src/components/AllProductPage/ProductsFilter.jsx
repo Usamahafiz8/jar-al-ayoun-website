@@ -1,7 +1,7 @@
+import RangeSlider from "react-range-slider-input";
+import "react-range-slider-input/dist/style.css";
 import Checkbox from "../Helpers/Checkbox";
 import ServeLangItem from "../Helpers/ServeLangItem";
-import RangeSlider from 'react-range-slider-input';
-import 'react-range-slider-input/dist/style.css';
 export default function ProductsFilter({
   categories,
   categoryHandler,
@@ -24,7 +24,7 @@ export default function ProductsFilter({
           className || ""
         }  ${filterToggle ? "block" : "hidden lg:block"}`}
       >
-        <div className="filter-subject-item pb-10 border-b border-qgray-border">
+        <div className="filter-subject-item pb-5 border-b border-qgray-border">
           <div className="subject-title mb-[30px]">
             <h1 className="text-black text-base font-500">
               {ServeLangItem()?.Product_categories}
@@ -35,7 +35,7 @@ export default function ProductsFilter({
               {categories &&
                 categories.length > 0 &&
                 categories.map((item, i) => (
-                  <li key={i} className="item mb-5">
+                  <li key={i} className="item mb-1">
                     <div className="flex justify-between items-center">
                       <div className="flex space-x-[14px] rtl:space-x-reverse items-center">
                         <div>
@@ -59,7 +59,7 @@ export default function ProductsFilter({
             </ul>
           </div>
         </div>
-        <div className="filter-subject-item pb-10 border-b border-qgray-border mt-10">
+        <div className="filter-subject-item pb-5 border-b border-qgray-border mt-5">
           <div className="subject-title mb-[30px]">
             <h1 className="text-black text-base font-500">
               {ServeLangItem()?.Price_Range}
@@ -68,7 +68,12 @@ export default function ProductsFilter({
           {volume && (
             <>
               <div className="price-range mb-5">
-                <RangeSlider value={volume} onInput={volumeHandler} min={priceMin} max={priceMax} />
+                <RangeSlider
+                  value={volume}
+                  onInput={volumeHandler}
+                  min={priceMin}
+                  max={priceMax}
+                />
               </div>
               <p className="text-xs text-qblack font-400">
                 {ServeLangItem()?.Price}: ${volume[0]} - ${volume[1]}
@@ -76,7 +81,7 @@ export default function ProductsFilter({
             </>
           )}
         </div>
-        <div className="filter-subject-item pb-10 border-b border-qgray-border mt-10">
+        <div className="filter-subject-item pb-5 border-b border-qgray-border mt-5">
           <div className="subject-title mb-[30px]">
             <h1 className="text-black text-base font-500">
               {ServeLangItem()?.Brands}
@@ -89,7 +94,7 @@ export default function ProductsFilter({
                 brands.map((brand, i) => (
                   <li
                     key={i}
-                    className="item flex justify-between items-center mb-5"
+                    className="item flex justify-between items-center mb-1"
                   >
                     <div className="flex space-x-[14px] rtl:space-x-reverse items-center">
                       <div>
@@ -117,7 +122,7 @@ export default function ProductsFilter({
           variantsFilter.map((variant, i) => (
             <div
               key={i}
-              className="filter-subject-item pb-10 border-b border-qgray-border mt-10"
+              className="filter-subject-item pb-5 border-b border-qgray-border mt-5"
             >
               <div className="subject-title mb-[30px]">
                 <h1 className="text-black text-base font-500">
@@ -131,7 +136,7 @@ export default function ProductsFilter({
                     variant.active_variant_items.map((varientItem, i) => (
                       <li
                         key={i}
-                        className="item flex justify-between items-center mb-5"
+                        className="item flex justify-between items-center mb-1"
                       >
                         <div className="flex space-x-[14px] rtl:space-x-reverse items-center">
                           <div>
