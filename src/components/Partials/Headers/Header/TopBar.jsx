@@ -1,7 +1,7 @@
 import Link from "next/link";
 // import ThinPeople from "../../../Helpers/icons/ThinPeople";
 import { useEffect, useState } from "react";
-import Tryon from "../../../3dtryon";
+// import Tryon from "../../../3dtryon";
 import ServeLangItem from "../../../Helpers/ServeLangItem";
 import Arrow from "../../../Helpers/icons/Arrow";
 import Multivendor from "../../../Shared/Multivendor";
@@ -27,7 +27,7 @@ export default function TopBar({ className, contact }) {
                     <a rel="noopener noreferrer">
                       <span className="text-xs leading-6 text-qblack font-500 cursor-pointer">
                         {/* {ServeLangItem()?.Try_3D} */}
-                        <Tryon />
+                        {/* <Tryon /> */}
                       </span>
                     </a>
                   </Link>

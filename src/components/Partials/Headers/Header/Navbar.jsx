@@ -1,7 +1,6 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import Tryon from "../../../3dtryon";
 import ServeLangItem from "../../../Helpers/ServeLangItem";
 import Arrow from "../../../Helpers/icons/Arrow";
 import Fire from "../../../Helpers/icons/Fire";
@@ -446,7 +445,7 @@ export default function Navbar({ className }) {
               <a rel="noopener noreferrer">
                 <span className="flex items-center text-sm font-600 cursor-pointer text-qblack ">
                   {/* <span>{ServeLangItem()?.Sellers}</span> */}
-                  <Tryon />
+                  {/* <Tryon /> */}
                 </span>
               </a>
             </Link>
