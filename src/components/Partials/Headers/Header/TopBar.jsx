@@ -25,9 +25,9 @@ export default function TopBar({ className, contact }) {
                 <li>
                   <Link href="/tracking-order" passHref>
                     <a rel="noopener noreferrer">
-                      <span className="text-xs leading-6 text-qblack font-500 cursor-pointer">
-                        {/* {ServeLangItem()?.Try_3D} */}
-                        {/* <Tryon /> */}
+                      <span className="text-xs   leading-6 text-qblack font-500 cursor-pointer">
+                        {ServeLangItem()?.Try_3D}
+                        {/* <Tryon /> */} TRY ON
                       </span>
                     </a>
                   </Link>
@@ -94,7 +94,7 @@ export default function TopBar({ className, contact }) {
                     className="w-full h-full flex gap-2 justify-between items-center text-qwhite "
                   >
                     <div className="flex rtl:space-x-reverse  space-x-3 items-center ">
-                      <span className="text-sm font-600 text-qwhite ">
+                      <span className="text-sm font-600 text-qblack ">
                         {/* {ServeLangItem()?.All_Categories} */}
                         Language
                       </span>
@@ -103,7 +103,7 @@ export default function TopBar({ className, contact }) {
                       <Arrow
                         width="5.78538"
                         height="1.28564"
-                        className="fill-current text-qwhite"
+                        className="fill-current text-qblack"
                       />
                     </div>
                   </button>

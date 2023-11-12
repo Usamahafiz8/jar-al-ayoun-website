@@ -1,19 +1,18 @@
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import PageTitle from "./Helpers/PageTitle";
-import Layout from "./Partials/Layout";
-// import languageModel from "../../utils/languageModel";
 import PageHead from "./Helpers/PageHead";
+import PageTitle from "./Helpers/PageTitle";
 import ServeLangItem from "./Helpers/ServeLangItem";
+import Layout from "./Partials/Layout";
 
 function CustomPageCom({ slug }) {
   const { websiteSetup } = useSelector((state) => state.websiteSetup);
   const [pageData, setPageData] = useState(null);
-  // const [langCntnt, setLangCntnt] = useState(null);
-  // useEffect(() => {
-  //     setLangCntnt(languageModel());
-  // }, []);
+  const [langCntnt, setLangCntnt] = useState(null);
+  useEffect(() => {
+    setLangCntnt(languageModel());
+  }, []);
   const router = useRouter();
   useEffect(() => {
     if (websiteSetup) {

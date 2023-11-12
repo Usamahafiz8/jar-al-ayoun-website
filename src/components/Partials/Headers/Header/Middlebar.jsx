@@ -47,7 +47,7 @@ export default function Middlebar({ className, settings }) {
   }, [cart]);
 
   return (
-    <div className={`w-full h-full p-1	 bg-white ${className}`}>
+    <div className={`w-full h-full p-1 	 bg-white ${className}`}>
       <div className="lg:block hidden">
         <div className="container-x mx-auto h-full nav-middle-bar">
           <div className=" pl-4 pr-2relative h-full">
@@ -190,7 +190,7 @@ export default function Middlebar({ className, settings }) {
                       style={{ zIndex: "35", margin: "0" }}
                     ></div>
                     <div
-                      className="w-[208px] h-[267px] bg-white absolute right-0 top-11 z-40 border-t-[3px] primary-border flex flex-col justify-between"
+                      className="w-[208px] h-[267px] bg-white absolute right-0 top-11 z-60 border-t-[3px] primary-border flex flex-col justify-between"
                       style={{
                         boxShadow: " 0px 15px 50px 0px rgba(0, 0, 0, 0.14)",
                       }}

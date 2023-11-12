@@ -23,7 +23,7 @@ export default function Navbar({ className }) {
   }, [categoryToggle]);
   return (
     <div
-      className={`nav-widget-wrapper w-full  h-[60px] relative z-30  ${
+      className={`nav-widget-wrapper w-full  h-[60px] relative z-30 border-b border-t border-qgray-border   ${
         className || ""
       }`}
     >

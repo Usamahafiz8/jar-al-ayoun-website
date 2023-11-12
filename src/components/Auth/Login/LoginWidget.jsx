@@ -124,7 +124,7 @@ function LoginWidget({ redirect = true, loginActionPopup, notVerifyHandler }) {
   }, []);
   return (
     <div className="w-full">
-      <div className="title-area flex flex-col justify-center items-center relative text-center mb-7">
+      <div className="title-area flex flex-col justify-center items-center relative text-center mb-7  ">
         <h1 className="text-[34px] font-bold leading-[74px] text-qblack">
           {ServeLangItem()?.Log_In}
         </h1>

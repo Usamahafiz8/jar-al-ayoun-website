@@ -14,7 +14,7 @@ function OneColumnAdsTwo({ data }) {
           backgroundSize: `cover`,
           backgroundRepeat: `no-repeat`,
         }}
-        className="w-full h-full flex justify-center items-center ltr:md:pl-[80px] rtl:md:pr-[80px] ltr:pl-3 rtl:pr-3 md:py-[40px] py-4 group"
+        className="w-full h-full flex justify-center  items-center ltr:md:pl-[80px] rtl:md:pr-[80px] ltr:pl-3 rtl:pr-3 md:py-[40px] py-4 group"
       >
         <div className="w-full h-full flex flex-col justify-evenly">
           <div>
@@ -34,7 +34,7 @@ function OneColumnAdsTwo({ data }) {
             >
               <a rel="noopener noreferrer">
                 <div className="cursor-pointer w-full relative">
-                  <div className="inline-flex text-qred rtl:space-x-reverse  space-x-1.5 items-center relative z-20">
+                  <div className="inline-flex text-qred  rtl:space-x-reverse  space-x-1.5 items-center relative z-20">
                     <span className="text-sm font-semibold leading-[30px] group-hover:text-white">
                       {ServeLangItem()?.Shop_Now}
                     </span>

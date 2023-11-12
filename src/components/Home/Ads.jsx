@@ -1,10 +1,10 @@
+import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import apiRequest from "../../../utils/apiRequest";
 import settings from "../../../utils/settings";
-import Link from "next/link";
-import Image from "next/image";
 import ServeLangItem from "../Helpers/ServeLangItem";
 export default function Ads({ handler }) {
   const { websiteSetup } = useSelector((state) => state.websiteSetup);
@@ -143,7 +143,7 @@ export default function Ads({ handler }) {
                   {ServeLangItem()?.Subscribe}
                 </button>
               </div>
-              <div className="absolute ltr:right-5 rtl:left-5 top-5">
+              <div className="absolute  ltr:right-5 rtl:left-5 top-5">
                 <svg
                   onClick={adsHandle}
                   viewBox="0 0 54 54"
