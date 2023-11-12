@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import ServeLangItem from "../../../Helpers/ServeLangItem";
 import Arrow from "../../../Helpers/icons/Arrow";
 import Multivendor from "../../../Shared/Multivendor";
+import Tryon from "../../../Tryon";
 
 export default function TopBar({ className, contact }) {
   const [auth, setAuth] = useState(null);
@@ -23,14 +24,15 @@ export default function TopBar({ className, contact }) {
             <div className="topbar-nav">
               <ul className="flex space-x-6">
                 <li>
-                  <Link href="/tracking-order" passHref>
-                    <a rel="noopener noreferrer">
-                      <span className="text-xs   leading-6 text-qblack font-500 cursor-pointer">
-                        {ServeLangItem()?.Try_3D}
-                        {/* <Tryon /> */} TRY ON
-                      </span>
-                    </a>
-                  </Link>
+                  {/* <Link href="" passHref> */}
+                  <a rel="noopener noreferrer">
+                    <span className="text-xs   leading-6 text-qblack font-500 cursor-pointer">
+                      {ServeLangItem()?.Try_3D}
+                      {/* <Tryon /> */} TRY ON
+                      <Tryon />
+                    </span>
+                  </a>
+                  {/* </Link> */}
                 </li>
                 <li>|</li>
                 <li>
